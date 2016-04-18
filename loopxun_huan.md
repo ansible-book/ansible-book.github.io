@@ -68,9 +68,6 @@ tasks:
 with_fileglob 可以以非递归的方式来模式匹配单个目录中的文件.如下面所示:
 
 ```
----
-- hosts: all
-
   tasks:
 
     # first ensure our target directory exists
