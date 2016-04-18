@@ -8,4 +8,5 @@
    * [Ansible用命令管理主机](ansibleyong_ming_ling_guan_li_zhu_ji.md)
    * [Ansible用脚本管理主机](ansibleyong_jiao_ben_guan_li_zhu_ji.md)
    * [Ansible模块Module](ansiblemo_kuai_module.md)
+* Ansible进阶
 
