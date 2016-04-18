@@ -1,7 +1,8 @@
 # Include语句
 
 
-<div style="width: 60%;">
+<div class="component-grid">
+<div style="top:0%;left:0.00%;height:100%;width:50.00%;">
 
 <pre>
 <code>
@@ -15,9 +16,9 @@
   command: /bin/bar
 </code>
 </pre>
-
 </div>
-<div style="width: 40%">
+
+<div style="top:0%;left:40.00%;height:100%;width:40.00%;">
 <pre>
 <code>
 ---
@@ -26,4 +27,5 @@ tasks:
   - include: tasks/foo.yml
 </code>
 </pre>
+</div>
 </div>
