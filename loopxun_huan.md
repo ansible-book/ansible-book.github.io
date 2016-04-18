@@ -44,3 +44,41 @@ tasks:
   with_nested:
     - [ 'alice', 'bob' ]
     - [ 'clientdb', 'employeedb', 'providerd']
+
+
+## 对哈希表使用循环
+
+```
+---
+users:
+  alice:
+    name: Alice Appleworth
+    telephone: 123-456-7890
+  bob:
+    name: Bob Bananarama
+    telephone: 987-654-3210
+tasks:
+  - name: Print phone records
+    debug: msg="User {{ item.key }} is {{ item.value.name }} ({{ item.value.telephone }})"
+    with_dict: "{{users}}"
+```
+
+## 对文件列表使用循环
+
+with_fileglob 可以以非递归的方式来模式匹配单个目录中的文件.如下面所示:
+
+```
+---
+- hosts: all
+
+  tasks:
+
+    # first ensure our target directory exists
+    - file: dest=/etc/fooapp state=directory
+
+    # copy each file over that matches the given pattern
+    - copy: src={{ item }} dest=/etc/fooapp/ owner=root mode=600
+      with_fileglob:
+        - /playbooks/files/fooapp/*
+
+```
