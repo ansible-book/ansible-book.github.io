@@ -79,3 +79,5 @@ foo: "{{ variable }}"
 
 
 https://en.wikipedia.org/wiki/YAML
+
+http://www.yamllint.com/
