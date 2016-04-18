@@ -9,5 +9,5 @@
    * [Ansible用脚本管理主机](ansibleyong_jiao_ben_guan_li_zhu_ji.md)
    * [Ansible模块Module](ansiblemo_kuai_module.md)
 * [Ansible进阶](ansiblejin_jie.md)
-   * 主机目录管理
+   * [主机目录管理](zhu_ji_mu_lu_guan_li.md)
 
