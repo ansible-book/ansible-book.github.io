@@ -10,4 +10,5 @@
    * [Ansible模块Module](ansiblemo_kuai_module.md)
 * [Ansible进阶](ansiblejin_jie.md)
    * [主机目录管理](zhu_ji_mu_lu_guan_li.md)
+   * Playbook
 
