@@ -2,7 +2,7 @@
 
 包装成块可以根据不同条件执行一段语句 ：
 
-```
+```yaml
  tasks:
      - block:
          - yum: name={{ item }} state=installed
@@ -22,7 +22,7 @@
 
 包装成块方便处理异常
 
-```
+```yaml
 tasks:
   - block:
       - debug: msg='i execute normally'
