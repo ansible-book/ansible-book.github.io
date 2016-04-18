@@ -14,6 +14,6 @@
        * [Playbook基本语法](playbookji_ben_yu_fa.md)
        * [Include语句](includeyu_ju.md)
        * [Role语句](roleyu_ju.md)
-       * 变量
+       * [变量](bian_liang.md)
        * Loop循环
 
