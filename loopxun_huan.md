@@ -15,17 +15,16 @@
 ```
 如果你在变量文件中或者 ‘vars’ 区域定义了一组YAML列表,你也可以这样做:
 
-with_items: "{{somelist}}"
-以上写法与下面是完全等同的:
 ```
-- name: add user testuser1
-  user: name=testuser1 state=present groups=wheel
-- name: add user testuser2
-  user: name=testuser2 state=present groups=wheel
- ```
-yum和apt模块中使用with_items执行时会有较少的包管理事务.
+vars:
+  somelist: ["testuser1", "testuser2"]
+tasks:
+  -name: add several user
+   user: name={{ item }} state=present groups=wheel
+   with_items: "{{somelist}}"
+```
 
-请note使用 ‘with_items’ 用于迭代的条目类型不仅仅支持简单的字符串列表.如果你有一个哈希列表,那么你可以用以下方式来引用子项:
+使用 ‘with_items’ 用于迭代的条目类型不仅仅支持简单的字符串列表.如果你有一个哈希列表,那么你可以用以下方式来引用子项:
 
 ```- name: add several users
   user: name={{ item.name }} state=present groups={{ item.groups }}
@@ -44,4 +43,4 @@ yum和apt模块中使用with_items执行时会有较少的包管理事务.
   mysql_user: name={{ item[0] }} priv={{ item[1] }}.*:ALL append_privs=yes password=foo
   with_nested:
     - [ 'alice', 'bob' ]
-    - [ 'clientdb', 'employeedb', 'providerd
+    - [ 'clientdb', 'employeedb', 'providerd']
