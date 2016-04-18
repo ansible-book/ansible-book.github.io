@@ -17,6 +17,7 @@
        * [Role语句](roleyu_ju.md)
        * [Loop循环](loopxun_huan.md)
        * [Block块](blockkuai.md)
+       * 条件选择
 * [推荐的参考资料](tui_jian_de_can_kao_zi_liao.md)
    * [YAML语法基础](yamlyu_fa_ji_chu.md)
 
