@@ -31,6 +31,9 @@ deploy.yml的内容：
 
 ```
 
+其中：
+
+
 上面的yml格式转化为json格式为：http://www.json2yaml.com/
 ```
 [
