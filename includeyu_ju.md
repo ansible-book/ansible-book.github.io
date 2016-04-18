@@ -2,7 +2,7 @@
 
 
 <div class="component-grid">
-<div class="grid-entry" style="top:0%;left:0.00%;height:100%;width:50.00%;">
+<div class="grid-entry" style="top:0%; left:0.00%; height:100%; width:50.00%;">
 
 <pre>
 <code>
