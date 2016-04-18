@@ -1,6 +1,6 @@
 # Include语句
 
-
+像其它语言的Include语句一样，可以这样用：
 <div class="component-grid">
 <div class="grid-entry" style="top:0%; left:0.00%; height:100%; width:50.00%;">
 
