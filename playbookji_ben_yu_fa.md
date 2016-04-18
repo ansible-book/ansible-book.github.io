@@ -56,7 +56,7 @@ deploy.yml示例：
   vars:
     http_port: 80
     max_clients: 200
-  remote_user: root
+  user: root
   tasks:
   - name: ensure apache is at the latest version
     yum: pkg=httpd state=latest
