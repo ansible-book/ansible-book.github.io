@@ -9,7 +9,7 @@ $ansible-palybook deploy.yml
 
 deploy.yml的内容：
 
-```YAML
+```yaml
 ---
 - hosts: webservers
   vars:
