@@ -1,20 +1,30 @@
 # Ansible模块Module
 
-什么是Ansible Module？
-Module是通过命令或者Playbook可以执行的task的插件
-Module是用Python写的。
-Ansible提供一些常用的Module http://docs.ansible.com/ansible/modules_by_category.html
-Ansible提供API，用户可以自己写Module
+
+## 什么是Ansible Module？
+* Module是通过命令或者Playbook可以执行的task的插件
+
+* Module是用Python写的。
+
+* Ansible提供一些常用的Module http://docs.ansible.com/ansible/modules_by_category.html
+
+* Ansible提供API，用户可以自己写Module
 
 
-Module在命令里使用Module
+
+
+## Module在命令里使用Module
+
 ```
 $ ansible atlanta -m copy -a "src=/etc/hosts dest=/tmp/hosts"
 $ ansible webservers -m yum -a "name=acme state=present"
 
 ```
 
-Ansilbe在Playbook使用Module
+
+## Ansilbe在Playbook使用Module
+
+
 ```
 ---
   tasks:
