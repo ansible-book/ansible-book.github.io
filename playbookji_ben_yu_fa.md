@@ -3,8 +3,8 @@
 创建文件deploy.yml
 
 执行
-```
-$ansible-playbook deploy.yml
+```bash
+$ ansible-playbook deploy.yml
 ```
 
 **hosts**：为主机的IP，或者主机组名，或者关键字all
@@ -19,7 +19,7 @@ $ansible-playbook deploy.yml
 
 deploy.yml示例：
 
-```
+```yml
 ---
 - hosts: webservers
   vars:
