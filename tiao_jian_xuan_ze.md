@@ -40,3 +40,59 @@ tasks:
   - shell: echo "only on Red Hat 6, derivatives, and later"
     when: ansible_os_family == "RedHat" and ansible_lsb.major_release|int >= 6
 ```
+
+
+## 条件表达式
+
+```
+vars:
+  epic: true
+```
+
+基本款
+```
+tasks:
+    - shell: echo "This certainly is epic!"
+      when: epic
+```
+否定款：
+```
+tasks:
+    - shell: echo "This certainly isn't epic!"
+      when: not epic
+```
+变量定义款
+```
+tasks:
+    - shell: echo "I've got '{{ foo }}' and am not afraid to use it!"
+      when: foo is defined
+
+    - fail: msg="Bailing out. this play requires 'bar'"
+      when: bar is not defined
+```
+数值表达款
+
+```
+tasks:
+    - command: echo {{ item }}
+      with_items: [ 0, 2, 4, 6, 8, 10 ]
+      when: item > 5
+```
+
+## 与Include一起用
+
+```
+- include: tasks/sometasks.yml
+  when: "'reticulating splines' in output"
+
+```
+
+
+## 与Role一起用
+```
+- hosts: webservers
+  roles:
+     - { role: debian_stock_config, when: ansible_os_family == 'Debian' }
+
+```
+
