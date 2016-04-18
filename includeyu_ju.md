@@ -18,7 +18,7 @@
 </pre>
 </div>
 
-<div class="grid-entry" style="top:0%; left:60.00%; height:100%; width:40.00%;">
+<div class="grid-entry" style="top:0%; right:0.00%; height:100%; width:40.00%;">
 <pre>
 <code>
 ---
