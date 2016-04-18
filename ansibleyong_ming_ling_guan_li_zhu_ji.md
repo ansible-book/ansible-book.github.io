@@ -3,7 +3,9 @@
 Ansbile Ad-Hoc Commands
 
 ```$ansible all -m ping -u bruce```
+
 ```$ansible all -a "/bin/echo hello"```
+
 ```$ansible atlanta -a "/sbin/reboot" -f 10```
 
 ```$ ansible atlanta -m copy -a "src=/etc/hosts dest=/tmp/hosts"```
