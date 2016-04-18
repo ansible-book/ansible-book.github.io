@@ -33,6 +33,16 @@ deploy.yml的内容：
 
 其中：
 
+**hosts**：为主机的IP，或者主机组名，或者关键字all
+
+**remote_user**: 以哪个用户身份执行。
+
+**vars**： 变量
+
+**tasks**: playbook的核心，定义顺序执行的action。每个action调用一个module。 action 语法： ```action: module options```
+
+**handers**： playbook的event，默认不会执行，在action里trigger才会执行。多次trigger只执行一次。
+
 
 上面的yml格式转化为json格式为：http://www.json2yaml.com/
 ```
