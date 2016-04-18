@@ -73,3 +73,9 @@ foo: "somebody said I should put a colon here: so I did"
 ```
 foo: "{{ variable }}" 
 ```
+
+## 参考资料
+
+
+
+https://en.wikipedia.org/wiki/YAML
