@@ -9,7 +9,7 @@ $ansible-palybook deploy.yml
 
 deploy.yml的内容：
 
-```
+```YAML
 ---
 - hosts: webservers
   vars:
@@ -42,7 +42,7 @@ deploy.yml的内容：
 
 
 上面的yml格式转化为json格式为：http://www.json2yaml.com/
-```
+```json
 [
   {
     "hosts": "webservers",
