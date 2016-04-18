@@ -11,6 +11,6 @@
 * [Ansible进阶](ansiblejin_jie.md)
    * [主机目录管理](zhu_ji_mu_lu_guan_li.md)
    * [Playbook](playbook.md)
-       * [Include语句](includeyu_ju.md)
        * [Playbook基本语法](playbookji_ben_yu_fa.md)
+       * [Include语句](includeyu_ju.md)
 
