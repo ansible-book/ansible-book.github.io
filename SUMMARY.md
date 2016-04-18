@@ -4,7 +4,6 @@
 * [Ansible介绍](chapter1.md)
 * [Ansible上手](ansibleshang_shou.md)
    * [安装Ansile](an_zhuang_ansile.md)
-       * Ansible的模块Module
    * [Ansible管理哪些主机](ansiblede_zhu_ji_mu_lu_guan_li.md)
    * [Ansible用命令管理主机](ansibleyong_ming_ling_guan_li_zhu_ji.md)
    * [Ansible用脚本管理主机](ansibleyong_jiao_ben_guan_li_zhu_ji.md)
