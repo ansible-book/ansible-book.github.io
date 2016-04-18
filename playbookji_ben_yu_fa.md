@@ -10,13 +10,21 @@ $ ansible-playbook deploy.yml
 查看输出的细节
 
 
-```ansible-playbook playbook.yml --list-hosts```
+```
+ansible-playbook playbook.yml --list-hosts
+```
 
 查看该脚本影响哪些hosts
 
-```ansible-playbook playbook.yml --list-hosts```
+```
+ansible-playbook playbook.yml --list-hosts
+```
 
+并行执行脚本
 
+```
+ansible-playbook playbook.yml -f 10
+```
 
 
 ## 主机和用户
@@ -36,19 +44,22 @@ $ ansible-playbook deploy.yml
 ```ansible-playbook deploy.yml --ask-become-pass```
 
 
+## 任务列表
+
+## Handlers
+在操作改变时执行的action。在所有的任务里表执行之后执行，并且只执行一次。
+
+```
+- name: template configuration file
+  template: src=template.j2 dest=/etc/foo.conf
+  notify:
+     - restart memcached
+     - restart apache
+```
+
+## 完整的deploy.yml示例
 
 
-**hosts**：为主机的IP，或者主机组名，或者关键字all
-
-**remote_user**: 以哪个用户身份执行。
-
-**vars**： 变量
-
-**tasks**: playbook的核心，定义顺序执行的action。每个action调用一个module。 action 语法： ```action: module options```
-
-**handers**： playbook的event，默认不会执行，在action里trigger才会执行。多次trigger只执行一次。
-
-deploy.yml示例：
 
 ```yml
 ---
