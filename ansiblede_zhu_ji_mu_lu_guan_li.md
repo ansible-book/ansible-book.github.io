@@ -21,7 +21,7 @@
 ### 最简单的hosts：
 
 
-```
+```ini
 192.168.1.50
 aserver.example.org
 bserver.example.org
@@ -30,7 +30,7 @@ bserver.example.org
 ###带分类的hosts:
 
 
-```
+```ini
 mail.example.com
 
 [webservers]
