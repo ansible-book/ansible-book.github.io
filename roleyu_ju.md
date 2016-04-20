@@ -11,7 +11,7 @@
             role的目录结构
         </td>
         <td>
-            main.yml中的使用
+            site.yml中的使用
         </td>
     </tr>
     <tr>
@@ -51,6 +51,7 @@ roles/
      - webservers
 </code>
 </pre>
+
         </td>
     </tr>
 </table>
