@@ -5,13 +5,15 @@
 
 
 
-```$ sudo yum install ansible -y ```
+```
+$ sudo yum install ansible -y 
 
-```$ ssh-keygen ```
-
-```$ ssh-copy-id remoteuser@remoteserver ```
-
-```$ ssh-keyscan remote_servers >> ~/.ssh/known_hosts```
+$ ssh-keygen
+ 
+$ ssh-copy-id remoteuser@remoteserver
+ 
+$ ssh-keyscan remote_servers >> ~/.ssh/known_hosts
+ ```
 
 
 ## 被管理的远程主机：
