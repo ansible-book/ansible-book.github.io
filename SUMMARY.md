@@ -10,7 +10,7 @@
    * [Ansible模块Module](ansiblemo_kuai_module.md)
 * [Ansible进阶](ansiblejin_jie.md)
    * [主机目录管理](zhu_ji_mu_lu_guan_li.md)
-       * 主机目录分组
+       * [主机目录分组](zhu_ji_mu_lu_fen_zu.md)
    * [Playbook](playbook.md)
        * [Playbook基本语法](playbookji_ben_yu_fa.md)
        * [变量](bian_liang.md)
