@@ -1,8 +1,26 @@
 # 变量
 
 
+## 定义和使用
 
-## 变量名
+
+使用yml格式定义
+```
+foo:
+  field1: one
+  field2: two
+```
+
+使用Python的template语言[Jinja2](http://jinja.pocoo.org/docs/dev/templates/#builtin-filters)的语法引用：
+利用中括号和点号来访问子属性
+```
+foo['field1']
+foo.field1
+```
 
 
-变量名可以为字母,数字以及下划线.变量始终应该以字母开头. “foo_port”是个合法的变量名.”foo5”也是. “foo-port”, “foo port”, “foo.port” 和 “12”则不是合法的变量名.
+
+
+
+
+
