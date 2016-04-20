@@ -11,6 +11,8 @@
 
 ```$ ssh-copy-id remoteuser@remoteserver ```
 
+```$ ssh-keyscan remote_servers >> ~/.ssh/known_hosts```
+
 
 ## 被管理的远程主机：
 
