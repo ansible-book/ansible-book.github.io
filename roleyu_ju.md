@@ -3,7 +3,7 @@
 
 强大的代码重用机制。重用包括vars_files, tasks, and handlers
 
-Role的目录结构：
+
 
 <table>
     <tr>
