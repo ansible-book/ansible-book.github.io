@@ -25,3 +25,6 @@ host2
 ntp_server=ntp.atlanta.example.com
 proxy=proxy.atlanta.example.com
 ```
+
+可以指定的参数在文档中
+http://docs.ansible.com/ansible/intro_inventory.html#list-of-behavioral-inventory-parameters
