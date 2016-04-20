@@ -39,11 +39,23 @@ tasks:
 
 循环也可以嵌套:
 
+```
 - name: give users access to multiple databases
   mysql_user: name={{ item[0] }} priv={{ item[1] }}.*:ALL append_privs=yes password=foo
   with_nested:
     - [ 'alice', 'bob' ]
     - [ 'clientdb', 'employeedb', 'providerd']
+```
+
+或者
+
+```
+- name: give users access to multiple databases
+  mysql_user: name={{ item.0 }} priv={{ item.1 }}.*:ALL append_privs=yes password=foo
+  with_nested:
+    - [ 'alice', 'bob' ]
+    - [ 'clientdb', 'employeedb', 'providerd']
+```
 
 
 ## 对哈希表使用循环
