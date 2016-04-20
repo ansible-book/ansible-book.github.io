@@ -22,3 +22,14 @@ $ ansible all -m setup -u root
     yum: name=git state=present
     when: ansible_os_family == "RedHat"
 ```
+
+
+## 关闭facts
+
+
+下面的代码关闭了系统收集变量，那么上面的变量就不能使用了
+
+```
+- hosts: whatever
+  gather_facts: no
+```
