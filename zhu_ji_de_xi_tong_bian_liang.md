@@ -24,6 +24,18 @@ $ ansible all -m setup -u root
 ```
 
 
+复杂facts变量的访问
+
+
+```
+{{ ansible_eth0["ipv4"]["address"] }}
+```
+
+```
+{{ ansible_eth0.ipv4.address }}
+```
+
+
 ## 关闭facts
 
 
