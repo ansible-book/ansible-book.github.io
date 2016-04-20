@@ -80,7 +80,10 @@ roles/
 
 ```
 
-执行顺序
+
+## 执行顺序
+
+pre_tasks > role > tasks > post_tasks
 
 ```
 ---
@@ -103,3 +106,5 @@ roles/
     - name: post
       shell: echo 'goodbye'
 ```
+
+
