@@ -19,3 +19,6 @@ www[01:50].example.com
 db-[a:f].example.com
 
 ```
+
+分组的子组
+
