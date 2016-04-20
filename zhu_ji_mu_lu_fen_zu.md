@@ -12,4 +12,10 @@ one.example.com
 two.example.com
 three.example.com
 
+[webservers]
+www[01:50].example.com
+
+[databases]
+db-[a:f].example.com
+
 ```
