@@ -14,6 +14,7 @@
        * [Playbook基本语法](playbookji_ben_yu_fa.md)
        * [变量](bian_liang.md)
            * [Playbook中使用变量](playbookzhong_shi_yong_bian_liang.md)
+           * 主机的系统变量
        * [Include语句](includeyu_ju.md)
        * [Role语句](roleyu_ju.md)
        * [条件选择](tiao_jian_xuan_ze.md)
