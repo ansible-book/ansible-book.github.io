@@ -26,7 +26,7 @@
        * [条件选择](tiao_jian_xuan_ze.md)
        * [Loop循环](loopxun_huan.md)
        * [Block块](blockkuai.md)
-   * ansible的配置
+   * [ansible的配置](ansiblede_pei_zhi.md)
 * [推荐的参考资料](tui_jian_de_can_kao_zi_liao.md)
    * [YAML语法基础](yamlyu_fa_ji_chu.md)
 
