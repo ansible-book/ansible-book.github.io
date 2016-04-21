@@ -1,9 +1,13 @@
 # 最佳使用方法
 
 
-鼓励文件的重用
+* 鼓励文件的重用
 
-尽量把大的文件分成小的文件
+* 尽量把大的文件分成小的文件
+
+
+https://github.com/ansible/ansible-examples
+
 
 ```
 production                # inventory file for production servers
