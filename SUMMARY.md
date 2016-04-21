@@ -9,6 +9,7 @@
    * [Ansible用脚本管理主机](ansibleyong_jiao_ben_guan_li_zhu_ji.md)
    * [Ansible模块Module](ansiblemo_kuai_module.md)
 * [Ansible进阶](ansiblejin_jie.md)
+   * [ansible的配置](ansiblede_pei_zhi.md)
    * [主机目录管理](zhu_ji_mu_lu_guan_li.md)
        * [主机目录分组](zhu_ji_mu_lu_fen_zu.md)
        * [指定连接的参数](zhi_ding_lian_jie_de_can_shu.md)
@@ -26,7 +27,6 @@
        * [条件选择](tiao_jian_xuan_ze.md)
        * [Loop循环](loopxun_huan.md)
        * [Block块](blockkuai.md)
-   * [ansible的配置](ansiblede_pei_zhi.md)
 * [推荐的参考资料](tui_jian_de_can_kao_zi_liao.md)
    * [YAML语法基础](yamlyu_fa_ji_chu.md)
 
