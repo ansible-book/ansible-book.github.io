@@ -26,11 +26,13 @@ tasks:
 
 使用 ‘with_items’ 用于迭代的条目类型不仅仅支持简单的字符串列表.如果你有一个哈希列表,那么你可以用以下方式来引用子项:
 
-```- name: add several users
+```
+- name: add several users
   user: name={{ item.name }} state=present groups={{ item.groups }}
   with_items:
     - { name: 'testuser1', groups: 'wheel' }
-    - { name: 'testuser2', groups: 'root' }```
+    - { name: 'testuser2', groups: 'root' }
+```
 请note如果同时使用 when 和 with_items （或其它循环声明）,`when`声明会为每个条目单独执行.请参见 the_when_statement 示例.
 
 
