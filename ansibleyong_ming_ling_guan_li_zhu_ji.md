@@ -22,6 +22,7 @@ ansible <host-pattern> [options]
 
 
 在所有的server上，以当前bash的同名用户，在远程主机执行“echo bash”
+
 ```$ansible all -a "/bin/echo hello"```
 
 ### 并行执行
