@@ -2,45 +2,61 @@
 
 ```
 ---
-- hosts: server
-  user: root
+- hosts: web
   vars:
-    port: 80
-    root_dir: /usr/share/nginx/html
+    http_port: 80
+    defined_name: "Hello My name is Jingjng"
+  remote_user: root
   tasks:
-    - name: write our nginx.conf
-      template: src=nginx.conf.j2 dest=/etc/nginx/nginx.conf
-      notify: restart nginx
+  - name: ensure apache is at the latest version
+    yum: pkg=httpd state=latest
 
-    - name: write our /etc/nginx/sites-available/default
-      template: src=default-site.j2 dest=/etc/nginx/sites-available/default
-      notify: restart nginx
+  - name: Write the configuration file
+    template: src=templates/httpd.conf.j2 dest=/etc/httpd/conf/httpd.conf
+    notify:
+    - restart apache
 
-    - name: deploy website content
-      template: src=index.html.j2 dest=/usr/share/nginx/html/index.html
+  - name: Write the default index.html file
+    template: src=templates/index2.html.j2 dest=/var/www/html/index.html
+
+  - name: ensure apache is running
+    service: name=httpd state=started
+  - name: insert firewalld rule for httpd
+    firewalld: port={{ http_port }}/tcp permanent=true state=enabled immediate=yes
+
+  handlers:
+    - name: restart apache
+      service: name=httpd state=restarted
+
 ```
 
 在template中可以直接使用系统变量和用户自定义的变量
+
+系统变量{{ ansible_hostname }},{{ ansible_default_ipv4.address }}
+用户自定义的变量{{ defined_name }}
+
+
 ```
-# {{ ansible_managed }}
+<html>
+<title>#46 Demo</title>
 
-server {
-	
-	listen {{ port }};
-	server_name {{ ansible_hostname }};
-	root {{ root_dir }};
-	index index.html index.htm;
+<!--
+http://stackoverflow.com/questions/22223270/vertically-and-horizontally-center-a-div-with-css
+http://css-tricks.com/centering-in-the-unknown/
+http://jsfiddle.net/6PaXB/
+-->
 
-	location / {
-		try_files $uri $uri/ =404;
-	}
+<style>.block {text-align: center;margin-bottom:10px;}.block:before {content: '';display: inline-block;height: 100%;vertical-align: middle;margin-right: -0.25em;}.centered {display: inline-block;vertical-align: middle;width: 300px;}</style>
 
-	error_page 404 /404.html;
-	error_page 500 502 503 504 /50x.html;
-	location = /50x.html {
-		root {{ root_dir }};
-	}
+<body>
+<div class="block" style="height: 99%;">
+    <div class="centered">
+        <h1>#46 Demo {{ defined_name }}</h1>
+        <p>Served by {{ ansible_hostname }} ({{ ansible_default_ipv4.address }}).</p>
+    </div>
+</div>
+</body>
+</html>
 
-}
 
 ```
