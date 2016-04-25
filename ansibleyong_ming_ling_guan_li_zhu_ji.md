@@ -15,7 +15,7 @@ ansible <host-pattern> [options]
 
 检查所有的server，是否以bruce用户创建了ansible主机可以访问的环境。
 
-```$ansible all -m ping -u bruce```
+```$ansible all -m ping -u jshi```
 
 
 ### 执行命令
@@ -31,7 +31,7 @@ ansible <host-pattern> [options]
 启动10个并行进行执行重起
 
 
-```$ansible atlanta -a "/sbin/reboot" -f 10```
+```$ansible lb -a "/sbin/reboot" -f 10```
 
 
 
@@ -40,7 +40,7 @@ ansible <host-pattern> [options]
 
 拷贝文件/etc/host到远程机器（组）atlanta，位置为/tmp/hosts
 
-```$ ansible atlanta -m copy -a "src=/etc/hosts dest=/tmp/hosts"```
+```$ ansible web -m copy -a "src=/etc/hosts dest=/tmp/hosts"```
 
 
 ### 安装包
@@ -48,7 +48,7 @@ ansible <host-pattern> [options]
 
 远程机器（组）webservers安装yum包
 
-```$ ansible webservers -m yum -a "name=acme state=present"```
+```$ ansible web -m yum -a "name=acme state=present"```
 
 
 ### 添加用户
@@ -63,14 +63,14 @@ ansible <host-pattern> [options]
 
 
 
-```$ ansible webservers -m git -a "repo=git://foo.example.org/repo.git dest=/srv/myapp version=HEAD"```
+```$ ansible web -m git -a "repo=git://foo.example.org/repo.git dest=/srv/myapp version=HEAD"```
 
 
 ### 起服务
 
 
 
-```$ ansible webservers -m service -a "name=httpd state=started"```
+```$ ansible web -m service -a "name=httpd state=started"```
 
 ### 查看远程主机的全部系统信息！！！
 
