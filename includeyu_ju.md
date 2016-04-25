@@ -27,9 +27,9 @@ main.yml文件中调用include的方法:
 加参数
 ```
 tasks:
-  - include: wordpress.yml wp_user=timmy
-  - include: wordpress.yml wp_user=alice
-  - include: wordpress.yml wp_user=bob
+  - include: tasks/firewall.yml port=80
+  - include: tasks/firewall.yml port=3260
+  - include: tasks/firewall.yml port=423
 ```
 
 
