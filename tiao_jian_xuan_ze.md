@@ -36,9 +36,11 @@ ansible hostname.example.com -m setup
 
 返回值的转换
 ```
-tasks:
-  - shell: echo "only on Red Hat 6, derivatives, and later"
-    when: ansible_os_family == "RedHat" and ansible_lsb.major_release|int >= 6
+---
+- hosts: web
+  tasks:
+    - debug: msg="only on Red Hat 7, derivatives, and later"
+      when: ansible_os_family == "RedHat" and ansible_lsb.major_release|int >= 6
 ```
 
 
