@@ -31,7 +31,7 @@ $ ansible web -m yum -a "name=httpd state=present"
   - name: ensure apache is at the latest version
     yum: pkg=httpd state=latest
   - name: write the apache config file
-    template: src=/srv/httpd.j2 dest=/etc/httpd.conf
+    template: src=templates/httpd.conf.j2 dest=/etc/httpd/conf/httpd.conf
   - name: ensure apache is running
     service: name=httpd state=started
 
