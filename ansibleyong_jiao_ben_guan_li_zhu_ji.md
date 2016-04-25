@@ -11,7 +11,7 @@ deploy.yml的内容：
 
 ```yaml
 ---
-- hosts: webservers
+- hosts: web
   vars:
     http_port: 80
     max_clients: 200
@@ -19,10 +19,15 @@ deploy.yml的内容：
   tasks:
   - name: ensure apache is at the latest version
     yum: pkg=httpd state=latest
-  - name: write the apache config file
-    template: src=/srv/httpd.j2 dest=/etc/httpd.conf
+    
+  - name: Write the configuration file
+    template: src=templates/httpd.conf.j2 dest=/etc/httpd/conf/httpd.conf
     notify:
     - restart apache
+
+  - name: Write the default index.html file
+    template: src=templates/index.html.j2 dest=/var/www/html/index.html
+
   - name: ensure apache is running
     service: name=httpd state=started
   handlers:
@@ -45,7 +50,7 @@ deploy.yml的内容：
 ```json
 [
   {
-    "hosts": "webservers",
+    "hosts": "web",
     "vars": {
       "http_port": 80,
       "max_clients": 200
@@ -57,11 +62,15 @@ deploy.yml的内容：
         "yum": "pkg=httpd state=latest"
       },
       {
-        "name": "write the apache config file",
-        "template": "src=/srv/httpd.j2 dest=/etc/httpd.conf",
+        "name": "Write the configuration file",
+        "template": "src=templates/httpd.conf.j2 dest=/etc/httpd/conf/httpd.conf",
         "notify": [
           "restart apache"
         ]
+      },
+      {
+        "name": "Write the default index.html file",
+        "template": "src=templates/index.html.j2 dest=/var/www/html/index.html"
       },
       {
         "name": "ensure apache is running",
