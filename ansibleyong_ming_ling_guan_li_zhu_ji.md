@@ -33,6 +33,11 @@ ansible <host-pattern> [options]
 
 ```$ansible atlanta -a "/sbin/reboot" -f 10```
 
+
+
+### 拷贝文件
+
+
 拷贝文件/etc/host到远程机器（组）atlanta，位置为/tmp/hosts
 
 ```$ ansible atlanta -m copy -a "src=/etc/hosts dest=/tmp/hosts"```
