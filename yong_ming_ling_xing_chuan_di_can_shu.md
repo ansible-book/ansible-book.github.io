@@ -17,13 +17,13 @@
 在命令行里面
 
 ```
-ansible-playbook release.yml --extra-vars "hosts=vipers user=starbuck"
+ansible-playbook e33_var_in_command.yml --extra-vars "hosts=web user=root"
 ```
 还可以用json格式传递参数
 ```
-ansible-playbook clean.yml --extra-vars "{'hosts':'vm-rhel7-1', 'user':'root'}"
+ansible-playbook e33_var_in_command.yml --extra-vars "{'hosts':'vm-rhel7-1', 'user':'root'}"
 ```
 还可以将参数放在文件里面
 ```
-ansible-playbook clean.yml --extra-vars "@test.json"
+ansible-playbook e33_var_in_command.yml --extra-vars "@vars.json"
 ```
