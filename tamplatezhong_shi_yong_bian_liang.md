@@ -32,9 +32,9 @@
 
 在template中可以直接使用系统变量和用户自定义的变量
 
-系统变量**{{ ansible_hostname }}**, **{{ ansible_default_ipv4.address }}**
+系统变量 ** {{ ansible_hostname }} **, ** {{ ansible_default_ipv4.address }} **
 
-用户自定义的变量**{{ defined_name }}**
+用户自定义的变量 ** {{ defined_name }} **
 
 
 ```
