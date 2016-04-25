@@ -6,38 +6,19 @@ Include语句的功能，基本的代码重用机制。重用tasks
 
 
 像其它语言的Include语句一样，直接Include：
-<div style="-webkit-column-count:2; -moz-column-count: 2; column-count: 2; -webkit-column-rule: 1px dotted #e0e0e0; -moz-column-rule: 1px dotted #e0e0e0; column-rule: 1px dotted #e0e0e0;">
-    <div style="display: inline-block;">
-    The foo.yml file:
-        <pre>
-<code>
+
+```
 ---
-# possibly saved as tasks/foo.yml
+# possibly saved as tasks/firewall_httpd_default.yml
 
-- name: placeholder foo
-  command: /bin/foo
-
-- name: placeholder bar
-  command: /bin/bar
-</code>
-    </pre>
-    </div>
-    <div style="display: inline-block;">
-    The main file main.yml:
-       <pre>
-<code>
----
-tasks:
-
-  - include: tasks/foo.yml
-
-
-
-
-</code>
-      </pre>
-    </div>
-</div>
+  - name: insert firewalld rule for httpd
+    firewalld: port=80/tcp permanent=true state=enabled immediate=yes
+```
+main.yml文件中调用include的方法:
+```
+  tasks:
+    - include: tasks/firewall_httpd_default.yml
+```
 
 
 ## 高级用法-加参数
@@ -51,11 +32,7 @@ tasks:
   - include: wordpress.yml wp_user=bob
 ```
 
-还可以简写成：
-```
-tasks:
- - { include: wordpress.yml, wp_user: timmy, ssh_keys: [ 'keys/one.txt', 'keys/two.txt' ] }
-```
+
 
 还可以这样加：
 ```
@@ -67,6 +44,12 @@ tasks:
         ssh_keys:
           - keys/one.txt
           - keys/two.txt
+```
+
+还可以简写成：
+```
+tasks:
+ - { include: wordpress.yml, wp_user: timmy, ssh_keys: [ 'keys/one.txt', 'keys/two.txt' ] }
 ```
 
 在handlers里面加include
