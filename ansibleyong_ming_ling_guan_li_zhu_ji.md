@@ -30,6 +30,7 @@ ansible <host-pattern> [options]
 
 启动10个并行进行执行重起
 
+
 ```$ansible atlanta -a "/sbin/reboot" -f 10```
 
 拷贝文件/etc/host到远程机器（组）atlanta，位置为/tmp/hosts
