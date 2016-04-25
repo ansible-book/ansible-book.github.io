@@ -75,7 +75,7 @@ handlers:
   - include: handlers/handlers.yml
 ```
 
-在全局加include，但是tasks和handlers不能有include
+在全局加include时，tasks和handlers不能有include
 ```
 - name: this is a play at the top level of a file
   hosts: all
