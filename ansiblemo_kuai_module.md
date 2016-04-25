@@ -17,7 +17,7 @@
 
 ```
 $ ansible all -m copy -a "src=/etc/hosts dest=/tmp/hosts"
-$ ansible web -m yum -a "name=acme state=present"
+$ ansible web -m yum -a "name=httpd state=present"
 
 ```
 
