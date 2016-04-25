@@ -24,22 +24,59 @@ $ ansible all -m setup -u root
 ```
 
 
-复杂facts变量的访问
+
+## 使用复杂facts变量
+
+
+
+假设在系统中收集到的如果包含
 
 
 ```
-{{ ansible_eth0["ipv4"]["address"] }}
+...
+        "ansible_ens3": {
+            "active": true, 
+            "device": "ens3", 
+            "ipv4": {
+                "address": "10.66.192.234", 
+                "netmask": "255.255.254.0", 
+                "network": "10.66.192.0"
+            }, 
+            "ipv6": [
+                {
+                    "address": "2620:52:0:42c0:5054:ff:fef2:e2a3", 
+                    "prefix": "64", 
+                    "scope": "global"
+                }, 
+                {
+                    "address": "fe80::5054:ff:fef2:e2a3", 
+                    "prefix": "64", 
+                    "scope": "link"
+                }
+            ], 
+            "macaddress": "52:54:00:f2:e2:a3", 
+            "module": "8139cp", 
+            "mtu": 1500, 
+            "promisc": false, 
+            "type": "ether"
+        }, 
+...
+```
+那么可以通过下面的两种方式访问复杂的变量中的子属性:
+
+```
+{{ ansible_ens3["ipv4"]["address"] }}
 ```
 
 ```
-{{ ansible_eth0.ipv4.address }}
+{{ ansible_ens3.ipv4.address }}
 ```
 
 
 ## 关闭facts
 
 
-下面的代码关闭了系统收集变量，那么上面的变量就不能使用了
+在Playbook中,如果写gather_facts来控制是否收集远程系统的信息.如果不收集系统信息,那么上面的变量就不能在该playybook中使用了.
 
 ```
 - hosts: whatever
