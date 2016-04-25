@@ -16,8 +16,8 @@
 ## Module在命令里使用Module
 
 ```
-$ ansible atlanta -m copy -a "src=/etc/hosts dest=/tmp/hosts"
-$ ansible webservers -m yum -a "name=acme state=present"
+$ ansible all -m copy -a "src=/etc/hosts dest=/tmp/hosts"
+$ ansible web -m yum -a "name=acme state=present"
 
 ```
 
