@@ -13,7 +13,7 @@
    * [主机目录管理](zhu_ji_mu_lu_guan_li.md)
        * [主机目录分组](zhu_ji_mu_lu_fen_zu.md)
        * [主机的连接参数和变量](zhi_ding_lian_jie_de_can_shu.md)
-       * [分组管理文件](fen_zu_guan_li_wen_jian.md)
+       * [按目录结构存储变量](fen_zu_guan_li_wen_jian.md)
    * [Playbook](playbook.md)
        * [Playbook基本语法](playbookji_ben_yu_fa.md)
        * [变量](bian_liang.md)
