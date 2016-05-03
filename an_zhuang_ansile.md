@@ -4,9 +4,15 @@
 ## 管理员的电脑上：
 
 
+安裝Ansible
 
 ```
 $ sudo yum install ansible -y 
+```
+
+配置Ansible
+
+```
 
 $ ssh-keygen
  
