@@ -3,17 +3,17 @@
 
 ## 文件开始符 
 
-> \---
-
+```
+---
+```
 
 ## 数组List
 
-
-> \- element1
-> 
-> \- element2
-> 
-> \- element3
+```.yaml
+- element1
+- element2
+- element3
+```
 
 
 
@@ -23,7 +23,10 @@
 ## 字典(Hash or Directory)
 
 
-> key: value
+```
+key: value
+```
+
 
 key和value已冒号加空格分隔。
 
