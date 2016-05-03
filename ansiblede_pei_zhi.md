@@ -21,4 +21,11 @@ Ansible1.5以前的版本顺序为：
 
 可以配置什麼?
 
+例子:
+
+https://raw.githubusercontent.com/ansible/ansible/devel/examples/ansible.cfg
+
+
+列表:
+
 http://docs.ansible.com/ansible/intro_configuration.html#explanation-of-values-by-section
