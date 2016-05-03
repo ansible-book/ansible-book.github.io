@@ -27,6 +27,31 @@ ansible-playbook playbook.yml -f 10
 ```
 
 
+## 完整的deploy.yml示例
+
+
+
+```yml
+---
+- hosts: webservers
+  vars:
+    http_port: 80
+    max_clients: 200
+  user: root
+  tasks:
+  - name: ensure apache is at the latest version
+    yum: pkg=httpd state=latest
+  - name: write the apache config file
+    template: src=/srv/httpd.j2 dest=/etc/httpd.conf
+    notify:
+    - restart apache
+  - name: ensure apache is running
+    service: name=httpd state=started
+  handlers:
+    - name: restart apache
+      service: name=httpd state=restarted
+```
+
 ## 主机和用户
 
 
@@ -93,27 +118,3 @@ tasks:
      - restart apache
 ```
 
-## 完整的deploy.yml示例
-
-
-
-```yml
----
-- hosts: webservers
-  vars:
-    http_port: 80
-    max_clients: 200
-  user: root
-  tasks:
-  - name: ensure apache is at the latest version
-    yum: pkg=httpd state=latest
-  - name: write the apache config file
-    template: src=/srv/httpd.j2 dest=/etc/httpd.conf
-    notify:
-    - restart apache
-  - name: ensure apache is running
-    service: name=httpd state=started
-  handlers:
-    - name: restart apache
-      service: name=httpd state=restarted
-```
