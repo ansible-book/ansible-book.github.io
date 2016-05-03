@@ -18,3 +18,7 @@ Ansible1.5以前的版本顺序为：
 * .ansible.cfg (in the home directory)
 * /etc/ansible/ansible.cfg
 ```
+
+可以配置什麼?
+
+http://docs.ansible.com/ansible/intro_configuration.html#explanation-of-values-by-section
