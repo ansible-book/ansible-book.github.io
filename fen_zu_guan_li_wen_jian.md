@@ -1,4 +1,4 @@
-# 分组管理文件
+# 按目录结构存储变量
 
 假设inventory文件为/etc/ansible/hosts，那么相关的hosts和group变量可以放在下面的目录结构下
 
