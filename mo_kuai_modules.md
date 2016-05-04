@@ -4,8 +4,12 @@
 比如yum就是一个core module, http://docs.ansible.com/ansible/yum_module.html
 yum_repository就是一个extra module, http://docs.ansible.com/ansible/yum_repository_module.html
 
-Core区别和extra module有什么区别呢?
-首先Core module是比较常用的module,并且经过严格测试的.
-你在使用的时候不用进行格外的配置和安装就可以直接使用的.
+Core Module
 
-extra module是
+* 比较常用的module
+* 经过严格测试的.
+* 你在使用的时候不用进行格外的配置和安装就可以直接使用的.
+
+
+Extra module
+
