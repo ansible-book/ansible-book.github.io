@@ -64,7 +64,7 @@ tasks:
 
 ```
 ---
-users:
+vars:
   alice:
     name: Alice Appleworth
     telephone: 123-456-7890
