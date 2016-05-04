@@ -1,10 +1,6 @@
 # Ansible入门
 
 
-本文的所有ansible playbook例子都放在github上,欢迎补充和纠错:
-
-https://github.com/shijingjing1221/ansible-first-book-examples
-
 
 ## 什么是Ansible?
 
@@ -20,3 +16,7 @@ Ansilbe通过SSH协议进行管理节点和远程节点之间的通信。理论�
 * 安装包
 * ...
 
+
+本文的所有ansible playbook例子都放在github上,欢迎补充和纠错:
+
+https://github.com/shijingjing1221/ansible-first-book-examples
