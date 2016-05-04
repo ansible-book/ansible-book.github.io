@@ -25,16 +25,16 @@
 ### Extra module的配置方法
 
 
-1 下载ansible module extra项目
+**1 下载ansible module extra项目**
 
 ```
 git clone https://github.com/ansible/ansible-modules-extras.git
 ```
 我的一下在/home/jshi/software/目录下了.后面会用到
 
-2 修改配置文件或者环境变量
+**2 修改配置文件或者环境变量**
 
-方法1 - 该ansible配置文件
+**方法1 - 该ansible配置文件**
 
 修改ansible配置文件/etc/ansible/ansible.cfg, 添加一行
 ```
@@ -57,7 +57,7 @@ library = library/ansible-modules-extras/
 ```
 
 
-方法2 - 该环境变量
+**方法2 - 该环境变量**
 ```
 export ANSIBLE_LIBRARY=/project/demo/demoansible/library/ansible-module-extras
 ```
