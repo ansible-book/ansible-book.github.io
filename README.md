@@ -1,6 +1,11 @@
 # Ansible入门
 
 
+本文的所有ansible playbook例子都放在github上,欢迎补充和纠错:
+
+https://github.com/shijingjing1221/ansible-first-book-examples
+
+
 ## 什么是Ansible?
 
 
