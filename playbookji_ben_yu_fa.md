@@ -115,6 +115,8 @@ tasks:
 
 在下面的例子里apache只执行一次
 
+https://github.com/shijingjing1221/ansible-first-book-examples/blob/master/handlers_state.yml
+
 
 ```
 ---
@@ -139,6 +141,18 @@ tasks:
 
 ```
 
+## 只有当TASKS的执行状态是changed时,才会执行handler
+
+
+
+下面的脚本执行两次,执行结果是不同的:
+
+第一次执行是,tasks的状态都是changed,会触发两次handler
+
+第二次执行是,第一个task /tmp/hosts的状态是OK,那么不会触发handlers"call by /tmp/hosts",
+第二个task的状态是changed,才会触发handler"call by /tmp/hosts.random_number"
+
+https://github.com/shijingjing1221/ansible-first-book-examples/blob/master/handlers_execution_time.yml
 
 ```
 ---
