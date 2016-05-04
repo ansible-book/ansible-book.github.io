@@ -108,13 +108,18 @@ tasks:
 ## Handlers
 
 
-在操作改变时执行的action。在所有的任务里表执行之后执行，并且只执行一次。
+在所有的任务里表执行之后执行，如果有多个task调用同一个handler,那么只执行一次。
 
 ```
 - name: template configuration file
   template: src=template.j2 dest=/etc/foo.conf
   notify:
-     - restart memcached
      - restart apache
+- name: change another configuration file
+  template: src=template2.j2 dest=/etc/foo2.conf
+  notify:
+   - restart apache
+ 
+  
 ```
 
