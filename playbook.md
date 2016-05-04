@@ -10,8 +10,13 @@ ansible的脚本语言,yaml格式. 请参考[YAML语法结构章节](yamlyu_fa_j
 ## TASK的状态
 
 
-tasks是有状态(status)的!!!
-TASK
+每一个task会调用一个module,在module中会去检查当前系统状态是否需要执行当前module的动作.
+
+如果执行那么task会得到返回值changed;
+如果不需要执行,那么tasks得到返回值ok
+
+copy module的判断方法如下,比较文件的checksum
+https://github.com/ansible/ansible-modules-core/blob/devel/files/copy.py
 
 
 ### 例子
