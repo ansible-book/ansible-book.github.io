@@ -28,6 +28,7 @@
        * [Loop循环](loopxun_huan.md)
        * [Block块](blockkuai.md)
        * Handler
+       * Tasks
    * [模块Modules](mo_kuai_modules.md)
    * [最佳使用方法](zui_jia_shi_yong_fang_fa.md)
 * [推荐的参考资料](tui_jian_de_can_kao_zi_liao.md)
