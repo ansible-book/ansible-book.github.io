@@ -3,7 +3,7 @@
 
 
 
-强大的代码重用机制。重用包括vars_files, tasks, and handlers.
+比include更强大的代码重用机制。一个role可以包含vars_files, tasks, and handlers等等.
 
 在ansible中,通过遵循特定的目录结构,就可以实现对role的定义.
 
