@@ -5,7 +5,9 @@
 
 比include更强大的代码重用机制。一个role可以包含vars_files, tasks, and handlers等等.
 
-在ansible中,通过遵循特定的目录结构,就可以实现对role的定义.
+Ansible提供了一个分享role的平台, https://galaxy.ansible.com/, 在galaxy上可以找到别人写好的role.
+
+
 
 
 ## Role的目录结构
@@ -13,8 +15,8 @@
 
 通常一个role定义了如何完成一个特定的功能,比如安装Webservers可以写成一个role, 安装Database可以写成一个role.
 
-Ansible提供了一个分享role的平台, https://galaxy.ansible.com/, 在galaxy上可以找到别人写好的role.
 
+在ansible中,通过遵循特定的目录结构,就可以实现对role的定义.
 
 下面的目录结构定义了两个role,一个是common,另外一个是webservers.
 在site.yml,调用了这两个role.
