@@ -26,8 +26,6 @@
             <pre>
 <code class='lang-yml'>
 site.yml
-webservers.yml
-fooservers.yml
 roles/
    common/
      files/
