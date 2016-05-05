@@ -10,7 +10,8 @@
 
 ## 基本的Role
 
-
+下面的目录结构定义了两个role,一个是common,另外一个是webservers.
+在site.yml,调用了这两个role
 
 <table>
     <tr>
@@ -27,7 +28,7 @@
 <code class='lang-yml'>
 site.yml
 roles/
-   common/
+   common/  
      files/
      templates/
      tasks/
@@ -66,15 +67,22 @@ roles/
 
 
 
+### 定义带参数的role
+
+
+
+
+### 使用带参数的role
+
+
 
 ```
 ---
 
 - hosts: webservers
   roles:
-    - common
-    - { role: foo_app_instance, dir: '/opt/a',  app_port: 5000 }
-    - { role: foo_app_instance, dir: '/opt/b',  app_port: 5001 }
+    - { role: role_with_var, param: 'Call some_role for the 1st time' }
+    - { role: role_with_var, param: 'Call some_role for the 2nd time' }
 ```
 
 
