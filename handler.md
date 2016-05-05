@@ -1,15 +1,27 @@
 # Handler
 
-Handlers里面的每一个handler,也是对module的一次调用. 而handler与tasks不同的是,handlers不会默认执行,更不会按顺序执行. 而是在tasks中通过nofify关键字触发handler的执行. 
 
-handlers会在所有tasks都执行以后再执行.如果有多处触发同一个handlers,那么它只执行一次.
+## 什么是handler?
+
+
+Handlers里面的每一个handler,也是对module的一次调用. 而handler与tasks不同的是,handlers不会默认的按顺序执行.
+
+Tasks中的任务都是有状态的,changed或者ok. Ansible提供了一种机制, 只在task的执行状态为changed的时候,才会触发执行,这就是handler.
+
+
+
+## 应用场景
+
 
 为什么会有handlers呢? 
 
-如果你在tasks中修改了apache的配置文件,需要重起apache, 此外还安装了apache的插件,那么还需要重起apache.像这样的应该场景中,为了避免重复执行执行重起apache的操作,ansible提供了handers.
+如果你在tasks中修改了apache的配置文件,需要重起apache, 此外还安装了apache的插件,那么还需要重起apache.像这样的应该场景中,重起apache就可以设计成一个handler. 
 
 
-### 在所有的任务里表执行之后执行，如果有多个task调用同一个handler,那么只执行一次。
+
+### 一个handler最多只执行一次
+
+在所有的任务里表执行之后执行，如果有多个task notify同一个handler,那么只执行一次。
 
 
 
@@ -78,3 +90,10 @@ https://github.com/shijingjing1221/ansible-first-book-examples/blob/master/handl
 
   
 ```
+
+
+## 按Handler的定义顺序执行
+
+
+
+handlers是安装在handlers中定义个顺序执行的.而不是安装notify的顺序执行的.
