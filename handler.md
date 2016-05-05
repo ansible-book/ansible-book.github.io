@@ -97,3 +97,34 @@ https://github.com/shijingjing1221/ansible-first-book-examples/blob/master/handl
 
 
 handlers是安装在handlers中定义个顺序执行的.而不是安装notify的顺序执行的.
+
+下面的例子定义的顺序是1>2>3,notify的顺序是3>2>1,实际执行按照1>2>3的顺序执行的.
+
+```
+---
+- hosts: lb
+  remote_user: root
+  gather_facts: no
+  vars:
+      random_number1: "{{ 10000 | random }}"
+      random_number2: "{{ 10000000000 | random }}"
+  tasks:
+  - name: Copy the /etc/hosts to /tmp/hosts.{{ random_number1 }}
+    copy: src=/etc/hosts dest=/tmp/hosts.{{ random_number1 }}
+    notify:
+      - define the 3nd handler
+  - name: Copy the /etc/hosts to /tmp/hosts.{{ random_number2 }}
+    copy: src=/etc/hosts dest=/tmp/hosts.{{ random_number2 }}
+    notify:
+      - define the 2nd handler
+      - define the 1nd handler
+
+  handlers:
+  - name: define the 1nd handler
+    debug: msg="define the 1nd handler"
+  - name: define the 2nd handler
+    debug: msg="define the 2nd handler"
+  - name: define the 3nd handler
+    debug: msg="define the 3nd handler"
+
+```
