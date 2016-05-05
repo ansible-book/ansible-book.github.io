@@ -74,3 +74,34 @@ handlers:
 - include: webservers.yml
 - include: dbservers.yml
 ```
+
+## include里面的handlers在外面调用不了
+不知道为什么文档里面写可以调用,文档的两个有矛盾:
+* hander的文档写不能调用
+http://docs.ansible.com/ansible/playbooks_intro.html
+* include的文档写能调用
+http://docs.ansible.com/ansible/playbooks_roles.html#task-include-files-and-encouraging-reuse
+
+下面的例子中是不能调用include里面的handler的
+
+```
+---
+- hosts: lb
+  user: root
+  gather_facts: no
+  vars:
+      random_number: "{{ 10000 | random }}"
+  tasks:
+  - name: Copy the /etc/hosts to /tmp/hosts.{{ random_number }}
+    copy: src=/etc/hosts dest=/tmp/hosts.{{ random_number }}
+    notify:
+      - restart apache
+      - restart apache in handlers
+
+
+  handlers:
+    - include: handlers/handlers.yml
+    - name: restart apache
+      debug: msg="This is the handler restart apache"
+
+```
