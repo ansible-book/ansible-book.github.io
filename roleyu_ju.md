@@ -10,6 +10,12 @@
 
 ## 基本的Role
 
+
+通常一个role定义了如何完成一个特定的功能,比如安装Webservers可以写成一个role, 安装Database可以写成一个role.
+
+Ansible提供了一个分享role的平台, https://galaxy.ansible.com/, 在galaxy上可以找到别人写好的role.
+
+
 下面的目录结构定义了两个role,一个是common,另外一个是webservers.
 在site.yml,调用了这两个role.
 
@@ -64,9 +70,6 @@ roles/
     </tr>
 </table>
 
-通常一个role定义了如何完成一个特定的功能,比如安装Webservers可以写成一个role, 安装Database可以写成一个role.
-
-Ansible提供了一个分享role的平台, https://galaxy.ansible.com/, 在galaxy上可以找到别人写好的role.
 ## 带参数的Role
 
 
