@@ -1,6 +1,12 @@
 # Handler
 
+Handlers里面的每一个handler,也是对module的一次调用. 而handler与tasks不同的是,handlers不会默认执行,更不会按顺序执行. 而是在tasks中通过nofify关键字触发handler的执行. 
 
+handlers会在所有tasks都执行以后再执行.如果有多处触发同一个handlers,那么它只执行一次.
+
+为什么会有handlers呢? 
+
+如果你在tasks中修改了apache的配置文件,需要重起apache, 此外还安装了apache的插件,那么还需要重起apache.像这样的应该场景中,为了避免重复执行执行重起apache的操作,ansible提供了handers.
 
 
 ### 在所有的任务里表执行之后执行，如果有多个task调用同一个handler,那么只执行一次。
