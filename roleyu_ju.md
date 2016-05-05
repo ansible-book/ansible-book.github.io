@@ -3,7 +3,9 @@
 
 
 
-强大的代码重用机制。重用包括vars_files, tasks, and handlers
+强大的代码重用机制。重用包括vars_files, tasks, and handlers.
+
+分享role的平台: https://galaxy.ansible.com/
 
 
 ## 基本的Role
@@ -119,3 +121,4 @@ pre_tasks > role > tasks > post_tasks
 ```
 
 看例子！！！
+
