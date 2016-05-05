@@ -16,6 +16,7 @@
        * [按目录结构存储变量](fen_zu_guan_li_wen_jian.md)
    * [Playbook](playbook.md)
        * [Playbook基本语法](playbookji_ben_yu_fa.md)
+       * Tasks
        * [变量](bian_liang.md)
            * [Playbook中使用变量](playbookzhong_shi_yong_bian_liang.md)
            * [主机的系统变量](zhu_ji_de_xi_tong_bian_liang.md)
@@ -28,7 +29,6 @@
        * [Loop循环](loopxun_huan.md)
        * [Block块](blockkuai.md)
        * Handler
-       * Tasks
    * [模块Modules](mo_kuai_modules.md)
    * [最佳使用方法](zui_jia_shi_yong_fang_fa.md)
 * [推荐的参考资料](tui_jian_de_can_kao_zi_liao.md)
