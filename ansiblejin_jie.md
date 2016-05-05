@@ -5,7 +5,7 @@
 
 
 * Ansible的主机目录管理(Host Inventory)
-
 * Ansible Playbook的进阶语法
+* 配置Extra Modules
 
 
