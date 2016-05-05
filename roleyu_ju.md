@@ -5,7 +5,7 @@
 
 强大的代码重用机制。重用包括vars_files, tasks, and handlers.
 
-分享role的平台: https://galaxy.ansible.com/
+在ansible中,通过遵循特定的目录结构,就可以实现对role的定义.
 
 
 ## Role的目录结构
