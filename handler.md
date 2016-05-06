@@ -27,7 +27,7 @@ Tasks中的任务都是有状态的,changed或者ok. Ansible提供了一种机�
 
 在下面的例子里apache只执行一次
 
-https://github.com/shijingjing1221/ansible-first-book-examples/blob/master/handlers_state.yml
+https://github.com/ansible-book/ansible-first-book-examples/blob/master/handlers_state.yml
 
 
 ```
