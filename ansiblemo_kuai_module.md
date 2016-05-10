@@ -8,6 +8,8 @@
 
 * Ansible提供一些常用的Module http://docs.ansible.com/ansible/modules_by_category.html
 
+* 通过命令ansible-doc可以查看module的用法
+
 * Ansible提供API，用户可以自己写Module
 
 
