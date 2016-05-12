@@ -1,4 +1,4 @@
-# tamplate中使用变量
+# template中使用变量
 
 ```
 ---
