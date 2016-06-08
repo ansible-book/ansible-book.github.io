@@ -32,6 +32,7 @@
        * [Block块](blockkuai.md)
    * [Modules的分类](mo_kuai_modules.md)
        * [Extra module的使用方法](extra_modulede_shi_yong_fang_fa.md)
+       * 命令行查看module的用法
    * [最佳使用方法](zui_jia_shi_yong_fang_fa.md)
 * [推荐的参考资料](tui_jian_de_can_kao_zi_liao.md)
    * [YAML语法基础](yamlyu_fa_ji_chu.md)
