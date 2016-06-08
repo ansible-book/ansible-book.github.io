@@ -30,7 +30,7 @@
        * [条件选择](tiao_jian_xuan_ze.md)
        * [Loop循环](loopxun_huan.md)
        * [Block块](blockkuai.md)
-   * [Modules的分类](mo_kuai_modules.md)
+   * [Ansible模块（Modules）](mo_kuai_modules.md)
        * [Modules的分类](modulesde_fen_lei.md)
        * [Extra module的使用方法](extra_modulede_shi_yong_fang_fa.md)
        * [命令行查看module的用法](ming_ling_xing_cha_kan_module_de_yong_fa.md)
