@@ -18,7 +18,7 @@
        * [Playbook基本语法](playbookji_ben_yu_fa.md)
            * [主机和用户](zhu_ji_he_yong_hu.md)
            * [执行的任务（Tasks）](tasks.md)
-           * [playbook中定义响应事件（Handler）](handler.md)
+           * [响应事件（Handler）](handler.md)
        * [变量](bian_liang.md)
            * [Playbook中使用变量](playbookzhong_shi_yong_bian_liang.md)
            * [主机的系统变量](zhu_ji_de_xi_tong_bian_liang.md)
