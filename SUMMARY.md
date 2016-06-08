@@ -26,7 +26,7 @@
            * [template中使用变量](tamplatezhong_shi_yong_bian_liang.md)
            * [用命令行传递参数](yong_ming_ling_xing_chuan_di_can_shu.md)
        * [Include语句](includeyu_ju.md)
-       * [Role语句](roleyu_ju.md)
+       * [ansible的“函数"(role语句）](roleyu_ju.md)
        * [条件选择语句when](tiao_jian_xuan_ze.md)
        * [循环语句loop](loopxun_huan.md)
        * [块语句block](blockkuai.md)
