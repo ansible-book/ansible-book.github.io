@@ -28,7 +28,7 @@
        * [Include语句](includeyu_ju.md)
        * [Role语句](roleyu_ju.md)
        * [条件选择语句when](tiao_jian_xuan_ze.md)
-       * [Loop循环](loopxun_huan.md)
+       * [循环语句loop](loopxun_huan.md)
        * [Block块](blockkuai.md)
    * [Ansible模块（Modules）](mo_kuai_modules.md)
        * [Modules的分类](modulesde_fen_lei.md)
