@@ -16,7 +16,7 @@
        * [按目录结构存储变量](fen_zu_guan_li_wen_jian.md)
    * [Ansible的脚本（Playbook）](playbook.md)
        * [Playbook基本语法](playbookji_ben_yu_fa.md)
-           * [主机和用户](zhu_ji_he_yong_hu.md)
+           * [主机和用户（hosts&user）](zhu_ji_he_yong_hu.md)
            * [执行的任务（Tasks）](tasks.md)
            * [响应事件（Handler）](handler.md)
        * [变量](bian_liang.md)
