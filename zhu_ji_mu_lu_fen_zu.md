@@ -1,4 +1,4 @@
-# 主机目录分组
+# 远程主机的分组
 
 ```ini
 mail.example.com
