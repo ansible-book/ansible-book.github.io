@@ -69,9 +69,9 @@ playbook deploy.yml包含下面几个域：
 
 
 
-不懂yml，没关系，上面的yml格式转化为json格式为：
+不懂yml，没关系，上面的deploy.yml格式转化为json格式为：
 
-提供json和yml互转的在线网站： http://www.json2yaml.com/
+
 ```json
 [
   {
@@ -111,3 +111,5 @@ playbook deploy.yml包含下面几个域：
   }
 ]
 ```
+
+提供json和yml互转的在线网站： http://www.json2yaml.com/
