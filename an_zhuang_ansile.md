@@ -24,6 +24,11 @@ $ ssh-copy-id remoteuser@remoteserver
 $ ssh-keyscan remote_servers >> ~/.ssh/known_hosts
  ```
 
+验证下有没有装好: 在管理节点执行下面的ssh命令，既不需要输入密码，也不会提醒你存储ssh key，那就成功啦。
+
+```
+$ ssh remoteuser@remoteserver
+```
 
 ## 被管理的远程主机：
 
