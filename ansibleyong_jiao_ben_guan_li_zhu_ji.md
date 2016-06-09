@@ -14,14 +14,21 @@ $ansible-palybook deploy.yml
 
 ##playbook的例子
 
-deploy.yml的内容：
+deploy.yml为web主机部署apache：
+安装apache包；
+拷贝配置文件httpd，并保证拷贝文件后，apache服务会被重启；
+拷贝默认的网页文件index.html，并保证拷贝文件后，apache服务会被重启；
+启动apache服务；
 
 其中：
 
 * **hosts**：为主机的IP，或者主机组名，或者关键字all
 * **remote_user**: 以哪个用户身份执行。
 * **vars**： 变量
-* **tasks**: playbook的核心，定义顺序执行的action。每个action调用一个module。 action 语法： ```action: module options```
+* **tasks**: playbook的核心，定义顺序执行的action。每个action调用一个module()。 
+
+* > action 语法： ```module： module_parameter=module_value```
+
 * **handers**： playbook的event，默认不会执行，在action里trigger才会执行。多次trigger只执行一次。
 
 
