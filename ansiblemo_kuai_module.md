@@ -2,15 +2,9 @@
 
 
 ## 什么是Ansible Module？
-* Module是通过命令或者Playbook可以执行的task的插件
 
-* Module是用Python写的。
 
-* Ansible提供一些常用的Module http://docs.ansible.com/ansible/modules_by_category.html
 
-* 通过命令ansible-doc可以查看module的用法
-
-* Ansible提供API，用户可以自己写Module
 
 
 
@@ -38,3 +32,14 @@ $ ansible web -m yum -a "name=httpd state=present"
     service: name=httpd state=started
 
 ```
+
+## Module的特性
+* Module是通过命令或者Playbook可以执行的task的插件
+
+* Module是用Python写的。
+
+* Ansible提供一些常用的Module http://docs.ansible.com/ansible/modules_by_category.html
+
+* 通过命令ansible-doc可以查看module的用法
+
+* Ansible提供API，用户可以自己写Module
