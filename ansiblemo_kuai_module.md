@@ -9,7 +9,7 @@ bash无论在命令行上执行，还是bash脚本中，都需要调用cd、ls�
 
 
 
-## Module在命令里使用Module
+## Ansible在命令里使用Module
 
 在命令行中
 
