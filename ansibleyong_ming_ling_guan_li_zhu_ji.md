@@ -8,7 +8,7 @@ ansible命令的格式是：
 ansible <host-pattern> [options]
 ```
 
-##ansible命令的功能
+##ansible命令功能有哪些
 
 先不用深纠命令的语法，讲完module那节，就可以理解语法，先从感官通过下面的命令认识下ansible的命令行都可以做什么。
 
