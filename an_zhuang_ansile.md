@@ -29,4 +29,4 @@ $ ssh-keyscan remote_servers >> ~/.ssh/known_hosts
 
 
 
-不需要安装特殊的包，只需要python>2.4，一般系统都会自带。
+不需要安装特殊的包，只需要python>2.4，RedHat Linux一般安装方式都自带。
