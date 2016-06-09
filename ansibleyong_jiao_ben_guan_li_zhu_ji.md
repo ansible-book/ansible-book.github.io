@@ -32,7 +32,7 @@ playbook deploy.yml包含下面几个域：
 * > action 语法： ```module： module_parameter=module_value```
 * > 常用的module有yum、copy、template等，module在ansible的作用，相当于bash脚本中yum，copy这样的命令。下一节会介绍。
 
-* **handers**： playbook的event，默认不会执行，在action里trigger才会执行。多次trigger只执行一次。
+* **handers**： 是playbook的event，默认不会执行，在action里触发才会执行。多次触发只执行一次。
 
 
 ```yaml
