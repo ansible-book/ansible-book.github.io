@@ -14,11 +14,12 @@ $ansible-palybook deploy.yml
 
 ##playbook的例子
 
-deploy.yml为web主机部署apache：
-安装apache包；
-拷贝配置文件httpd，并保证拷贝文件后，apache服务会被重启；
-拷贝默认的网页文件index.html，并保证拷贝文件后，apache服务会被重启；
-启动apache服务；
+deploy.yml的功能为web主机部署apache, 其中包含以下部署 ：
+1. 安装apache包；
+2. 拷贝配置文件httpd，并保证拷贝文件后，apache服务会被重启；
+3. 拷贝默认的网页文件index.html；
+4. 启动apache服务；
+
 
 其中：
 
