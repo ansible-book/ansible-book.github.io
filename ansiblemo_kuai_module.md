@@ -11,11 +11,16 @@ bash无论在命令行上执行，还是bash脚本中，都需要调用cd、ls�
 
 ## Module在命令里使用Module
 
+在命令行中
+
+> -m后面接调用module的名字
+> 
+> -a后面接调用module的参数
 
 ```
 $ #使用module copy拷贝管理员节点文件/etc/hosts到所有远程主机/tmp/hosts
 $ ansible all -m copy -a "src=/etc/hosts dest=/tmp/hosts"
-$ #使用module copy拷贝管理员节点文件/etc/hosts到所有远程主机/tmp/hosts
+$ #使用module yum在远程主机web上安装httpd包
 $ ansible web -m yum -a "name=httpd state=present"
 
 ```
@@ -23,6 +28,11 @@ $ ansible web -m yum -a "name=httpd state=present"
 
 ## Ansilbe在Playbook使用Module
 
+在playbook中，tasks中的每一个action都是对module的一次调用。在每个action中：
+
+> 冒号:前面是module的命令
+> 
+> 冒号:后面是调用module的参数
 
 ```
 ---
