@@ -11,8 +11,11 @@ bash无论在命令行上执行，还是bash脚本中，都需要调用cd、ls�
 
 ## Module在命令里使用Module
 
+
 ```
+$ #使用module copy拷贝管理员节点文件/etc/hosts到所有远程主机/tmp/hosts
 $ ansible all -m copy -a "src=/etc/hosts dest=/tmp/hosts"
+$ #使用module copy拷贝管理员节点文件/etc/hosts到所有远程主机/tmp/hosts
 $ ansible web -m yum -a "name=httpd state=present"
 
 ```
