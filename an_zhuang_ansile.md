@@ -20,14 +20,15 @@ $ sudo yum install ansible -y #Fedora 直接安装包既可
 其实就是配置从**管理节点到远程主机**之间基于key（无密码的方式）的**SSH连接**：
 
 ```
+$ # 生成ssh key
 $ ssh-keygen
- 
+$ # 拷贝ssh key到远程主机，ssh的时候就不需要输入密码了
 $ ssh-copy-id remoteuser@remoteserver
- 
+$ # 下面的命令，ssh的时候不会提示是否保存key
 $ ssh-keyscan remote_servers >> ~/.ssh/known_hosts
  ```
 
-验证下有没有装好: 在管理节点执行下面的ssh命令，既不需要输入密码，也不会提醒你存储ssh key，那就成功啦。
+验证下有没有装好: 在管理节点执行下面的ssh命令，既**不需要输入密码**，也**不会提醒你存储key**，那就成功啦。
 
 ```
 $ ssh remoteuser@remoteserver
