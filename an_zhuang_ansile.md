@@ -1,19 +1,22 @@
 # 安装Ansile
 
+这里以RedHat Linux为例，其他系统请参考ansible的官网
+
 
 ## 管理员的电脑上：
 
 
-安裝Ansible
+* 安裝Ansible软件
 
 ```
 $ sudo yum install ansible -y 
 ```
 
-配置Ansible
+* 配置Ansible管理节点和主机的连接
+
+其实就是配置从**管理节点到远程主机**之间基于key（无密码的方式）的**SSH连接**：
 
 ```
-
 $ ssh-keygen
  
 $ ssh-copy-id remoteuser@remoteserver
