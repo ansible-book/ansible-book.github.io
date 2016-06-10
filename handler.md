@@ -62,10 +62,13 @@ https://github.com/ansible-book/ansible-first-book-examples/blob/master/handlers
 
 下面的脚本执行两次,执行结果是不同的:
 
-第一次执行是,tasks的状态都是changed,会触发两次handler
+* 第一次执行是，tasks的状态都是changed，会触发两个handler
 
-第二次执行是,第一个task /tmp/hosts的状态是OK,那么不会触发handlers"call by /tmp/hosts",
-第二个task的状态是changed,才会触发handler"call by /tmp/hosts.random_number"
+* 第二次执行是,
+  * 第一个task的状态是OK，那么不会触发handlers"call by /tmp/hosts",
+  * 第二个task的状态是changed，触发了handler"call by /tmp/hosts.random_number"
+
+测试代码见：
 
 https://github.com/shijingjing1221/ansible-first-book-examples/blob/master/handlers_execution_time.yml
 
@@ -99,9 +102,9 @@ https://github.com/shijingjing1221/ansible-first-book-examples/blob/master/handl
 
 
 
-handlers是安装在handlers中定义个顺序执行的.而不是安装notify的顺序执行的.
+handlers是按照在handlers中定义个顺序执行的，而不是安装notify的顺序执行的。
 
-下面的例子定义的顺序是1>2>3,notify的顺序是3>2>1,实际执行按照1>2>3的顺序执行的.
+下面的例子定义的顺序是1>2>3，notify的顺序是3>2>1，实际执行顺序：1>2>3.
 
 ```
 ---
