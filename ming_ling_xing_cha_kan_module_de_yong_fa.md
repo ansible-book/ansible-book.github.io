@@ -6,7 +6,7 @@
 ```
 ansible-doc module_name
 ```
-例如, core module yum，可以在任何目录下执行查看yum的用法
+core module可以在任何目录下执行。例如查看yum的用法：
 ```
 ansible-doc yum
 ```
