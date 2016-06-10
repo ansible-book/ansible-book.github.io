@@ -22,7 +22,7 @@ library	= /home/jshi/software/ansible-modules-extras/
 
 **方法2 - 改ansible当前目录下配置文件ansible.cfg**
 
-改ansible playbook当前的目录下的配置文件ansible.cfg，那么只**对当前目录的playbook生效**。对所有其它目录，包括父目录和子目录的playbook都不生效
+改ansible playbook当前的目录下的配置文件ansible.cfg，那么只**对当前目录的playbook生效**。对所有其它目录，包括父目录和子目录的playbook都不生效。
 ```
 library/ansible-modules-extras
 ansible.cfg
