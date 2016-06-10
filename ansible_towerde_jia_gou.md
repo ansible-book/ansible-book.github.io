@@ -18,7 +18,7 @@ Ansile Tower则是针对解决企业级用户以上两个需求的，ansible tow
 
 * ansible网站所有人可以共享playbook脚本，减少重复工作。
 
-* 此外ansible还可以收集和展现所有主机所有playbook的执行状态，便于统计和分析主机的状态。
+* 此外ansible还可以收集和展现所有主机的playbook的执行状况，便于统计和分析主机的状态。
 
 说了这么多，看下面这张架构图就清晰了：
 
