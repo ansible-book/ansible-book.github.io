@@ -10,7 +10,7 @@ ansible <host-pattern> [options]
 
 ##ansible命令功能有哪些
 
-先不用深纠命令的语法，讲完module那节，就可以理解语法，先从感官通过下面的命令认识下ansible的命令行都可以做什么。
+先不用深纠命令的语法，讲完module那节，就可以理解语法。先从感官上，通过下面的命令认识下ansible的命令行都可以做什么。
 
 #### 检查ansible安装环境
 
@@ -27,15 +27,6 @@ ansible <host-pattern> [options]
 在所有的server上，以当前bash的同名用户，在远程主机执行“echo bash”
 
 ```$ansible all -a "/bin/echo hello"```
-
-#### 并行执行
-
-
-启动10个并行进行执行重起
-
-
-```$ansible lb -a "/sbin/reboot" -f 10```
-
 
 
 #### 拷贝文件
@@ -75,8 +66,16 @@ ansible <host-pattern> [options]
 
 ```$ ansible web -m service -a "name=httpd state=started"```
 
-#### 查看远程主机的全部系统信息！！！
 
+#### 并行执行
+
+
+启动10个并行进行执行重起
+
+
+```$ansible lb -a "/sbin/reboot" -f 10```
+
+#### 查看远程主机的全部系统信息！！！
 
 
 ```$ ansible all -m setup```
