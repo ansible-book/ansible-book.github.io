@@ -4,9 +4,11 @@
 ## 什么是handler?
 
 
-Handlers里面的每一个handler,也是对module的一次调用. 而handler与tasks不同的是,handlers不会默认的按顺序执行.
+每个主流的编程语言都会有event机制，那么handler就是playbook的event。
 
-Tasks中的任务都是有状态的,changed或者ok. Ansible提供了一种机制, 只在task的执行状态为changed的时候,才会触发执行,这就是handler.
+Handlers里面的每一个handler，也是对module的一次调用。而handler与tasks不同的是，handlers不会默认的按顺序执行。
+
+Tasks中的任务都是有状态的，changed或者ok。 Ansible提供了一种机制，只在task的执行状态为changed的时候，才会触发执行，这就是handler。
 
 
 
