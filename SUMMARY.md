@@ -22,7 +22,7 @@
            * [响应事件(Handler)](handler.md)
        * [变量](bian_liang.md)
            * [Playbook中使用的变量](playbookzhong_shi_yong_bian_liang.md)
-           * [主机的系统变量](zhu_ji_de_xi_tong_bian_liang.md)
+           * [主机的系统变量(facts)](zhu_ji_de_xi_tong_bian_liang.md)
            * [注册变量](zhu_ce_bian_liang.md)
            * [template中使用变量](tamplatezhong_shi_yong_bian_liang.md)
            * [用命令行传递参数](yong_ming_ling_xing_chuan_di_can_shu.md)
