@@ -1,6 +1,6 @@
 # Ansible用脚本管理主机
 
-只有脚本才可以重用，避免总敲重复的代码。Ansible的脚本的名字叫Playbook，使用的是yml的格式。
+只有脚本才可以重用，避免总敲重复的代码。Ansible脚本的名字叫Playbook，使用的是yml的格式。
 
 注解：yml和json类似，是一种表示数据的格式。
 
@@ -14,14 +14,14 @@ $ansible-palybook deploy.yml
 
 ##playbook的例子
 
-deploy.yml的功能为web主机部署apache, 其中包含以下部署 ：
+deploy.yml的功能为web主机部署apache, 其中包含以下部署步骤：
 1. 安装apache包；
 2. 拷贝配置文件httpd，并保证拷贝文件后，apache服务会被重启；
 3. 拷贝默认的网页文件index.html；
 4. 启动apache服务；
 
 
-playbook deploy.yml包含下面几个域：
+playbook deploy.yml包含下面几个关键字，每个关键字的含义：
 
 * **hosts**：为主机的IP，或者主机组名，或者关键字all
 * **remote_user**: 以哪个用户身份执行。
