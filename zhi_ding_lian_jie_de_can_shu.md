@@ -17,7 +17,7 @@ other2.example.com     ansible_connection=ssh        ansible_user=mdehaan
 host1 http_port=80 maxRequestsPerChild=808
 host2 http_port=303 maxRequestsPerChild=909
 ```
-可以指定的参数在文档中
+所有可以指定的参数在文档中
 http://docs.ansible.com/ansible/intro_inventory.html#list-of-behavioral-inventory-parameters
 
 
