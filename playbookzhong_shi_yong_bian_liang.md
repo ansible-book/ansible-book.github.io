@@ -1,6 +1,6 @@
-# Playbook中使用变量
+# Playbook中使用的变量
 
-在Playbook中使用
+在Playbook中使用，需要用{{ }}引用以来即可：
 
 ```
 - hosts: webservers
@@ -22,7 +22,7 @@
         template: src={{ apache_config }} dest=/etc/httpd/conf.d/{{ apache_config }}  
 ```
 
-vars/server_vars.yml的内容为：
+变量文件vars/server_vars.yml的内容为：
 
 ```
 apache_config: labs.conf
