@@ -42,7 +42,7 @@ YAML的陷阱是YAML和Ansible Playbook的变量语法不能在一起好好工�
 ```
 
 
-要在{ 开始的值加上引号:
+解决办法：要在{ 开始的值**加上引号**:
 
 ```
 - hosts: app_servers
