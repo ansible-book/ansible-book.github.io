@@ -1,6 +1,6 @@
 # 安装Ansile
 
-这里以RedHat Linux为例，其他系统请参考ansible的官网
+这里以RedHat系Linux为例，其他系统请参考ansible的官网
 
 
 ## 管理员的电脑上：
