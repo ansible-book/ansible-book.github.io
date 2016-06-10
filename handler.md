@@ -15,9 +15,9 @@ Tasks中的任务都是有状态的，changed或者ok。 Ansible提供了一种�
 ## 应用场景
 
 
-为什么会有handlers呢? 
+什么情况下使用handlers呢? 
 
-如果你在tasks中修改了apache的配置文件,需要重起apache, 此外还安装了apache的插件,那么还需要重起apache.像这样的应该场景中,重起apache就可以设计成一个handler. 
+如果你在tasks中修改了apache的配置文件。需要重起apache。此外还安装了apache的插件。那么还需要重起apache。像这样的应该场景中，重起apache就可以设计成一个handler. 
 
 
 
