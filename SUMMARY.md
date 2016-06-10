@@ -28,7 +28,7 @@
            * [用命令行传递参数](yong_ming_ling_xing_chuan_di_can_shu.md)
        * [重用playbook（include语句）](includeyu_ju.md)
        * [ansible的“函数"(role语句）](roleyu_ju.md)
-       * [条件选择语句when](tiao_jian_xuan_ze.md)
+       * [条件语句when](tiao_jian_xuan_ze.md)
        * [循环语句loop](loopxun_huan.md)
        * [块语句block](blockkuai.md)
    * [更多的Ansible模块(Extra Modules)](mo_kuai_modules.md)
