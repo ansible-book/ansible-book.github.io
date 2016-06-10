@@ -1,7 +1,7 @@
 # 用命令行传递参数
 
 
-在release.yml文件里，变量hosts和user需要从命令行传递。
+在release.yml文件里，hosts和user都定义为变量，需要从命令行传递变量值。
 
 ```
 ---
