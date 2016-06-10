@@ -1,13 +1,13 @@
 # 主机的系统变量
 
-ansible会通过facts来收集主机的系统信息，这些信息可以直接以变量的形式引用。
+ansible会通过module setup来收集主机的系统信息，这些收集到的系统信息叫做facts，这些facts信息可以直接以变量的形式使用。
 
-哪些facts变量可以引用呢？
+哪些facts变量可以引用呢？在命令行上通过调用setup module命令可以查看
 
 ```
 $ ansible all -m setup -u root
 ```
-
+怎样在playbook中使用facts变量呢，答案是直接使用：
 ```
 ---
 - hosts: all
@@ -29,7 +29,7 @@ $ ansible all -m setup -u root
 
 
 
-假设在系统中收集到的如果包含
+一般在系统中收集到如下的信息，复杂的、多层级的facts变量如何使用呢？
 
 
 ```
