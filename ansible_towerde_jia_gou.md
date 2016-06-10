@@ -6,6 +6,6 @@ Ansilbe Tower一款针对企业级的收费软件。
 
 首先，每增加一台主机，都需要手工配置一下ssh连接，企业级的pc主机成百上千，每个管理员都需要在自己的电脑上配置所有的ssh连接，无疑工作量巨大。
 
-还有，在安全方面如果管理员能够拿到ssh key，或者分享给别人，对于生产环境来说无疑是最大的安全隐患。
+还有，在安全方面如果管理员能够拿到ssh key，或者拷贝给别人，对于生产环境来说无疑是最大的安全隐患。
 
-Ansile Tower则是针对解决企业级用户以上两个需求的，ansible tower是中心化ansible管理节点，它通过
+Ansile Tower则是针对解决企业级用户以上两个需求的，ansible tower是中心化ansible管理节点，它向管理员提供网站页面，来运行ansible脚本playbook。管理员在ansible tower上使用和分享主机的ssh key，但是不能查看到拷贝key文件，如果
