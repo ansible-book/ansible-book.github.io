@@ -33,7 +33,7 @@ tasks:
     - { name: 'testuser1', groups: 'wheel' }
     - { name: 'testuser2', groups: 'root' }
 ```
-请note如果同时使用 when 和 with_items （或其它循环声明）,`when`声明会为每个条目单独执行.请参见 the_when_statement 示例.
+注意：如果同时使用 when 和 with_items （或其它循环声明）,`when`声明会为每个条目单独执行.请参见 the_when_statement 示例.
 
 
 ## 嵌套循环
