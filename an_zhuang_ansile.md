@@ -24,7 +24,7 @@ $ # 生成ssh key
 $ ssh-keygen
 $ # 拷贝ssh key到远程主机，ssh的时候就不需要输入密码了
 $ ssh-copy-id remoteuser@remoteserver
-$ # 下面的命令，ssh的时候不会提示是否保存key
+$ # ssh的时候不会提示是否保存key
 $ ssh-keyscan remote_servers >> ~/.ssh/known_hosts
  ```
 
