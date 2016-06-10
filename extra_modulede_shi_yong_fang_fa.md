@@ -10,7 +10,7 @@
 git clone https://github.com/ansible/ansible-modules-extras.git
 ```
 
-我的一下在/home/jshi/software/目录下了.后面会用到
+我的一下在/home/jshi/software/目录下了，后面会用到。
 
 **2 修改配置文件或者环境变量**
 
