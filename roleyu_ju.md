@@ -15,8 +15,9 @@ Ansible提供了一个分享role的平台, https://galaxy.ansible.com/, 在galax
 
 **在ansible中,通过遵循特定的目录结构,就可以实现对role的定义.**
 
-下面的目录结构定义了两个role,一个是common,另外一个是webservers.
-在site.yml,调用了这两个role.
+下面的目录结构定义了两个role：一个是common，另外一个是webservers。
+
+在site.yml，调用了这两个role。
 
 
 <table>
