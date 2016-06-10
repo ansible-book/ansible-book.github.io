@@ -28,7 +28,7 @@ ansible-playbook playbook.yml -f 10
 ```
 
 
-## 完整的deploy.yml示例
+## 完整的playbook脚本示例
 
 最基本的playbook脚本分为三个部分:
 
@@ -41,6 +41,7 @@ ansible-playbook playbook.yml -f 10
 3. 善后的任务都有什么
   * handlers
 
+deploy.yml文件
 ```yml
 ---
 - hosts: webservers
