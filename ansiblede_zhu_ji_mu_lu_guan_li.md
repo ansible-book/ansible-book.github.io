@@ -1,6 +1,6 @@
-# Ansible的主机目录管理
+# Ansible的主机目录
 
-## 什么是主机目录？
+## 什么是主机目录（Host Inventory）？
 
 
 主机目录是配置文件，用来告诉Ansible需要管理哪些主机。并且把这些主机根据按需分类。
@@ -12,14 +12,15 @@
 
 默认的文件是：
 **/etc/ansible/hosts**
-可以修改，下一章介绍。
+
+可以修改为其它的文件，下一章Ansible进阶中介绍。
 
 
 ## 例子
 
 
 
-### 最简单的hosts：
+### 最简单的hosts文件：
 
 
 ```ini
@@ -28,7 +29,7 @@ aserver.example.org
 bserver.example.org
 ```
 
-###带分类的hosts:
+###带分类的hosts文件:
 
 
 ```ini
