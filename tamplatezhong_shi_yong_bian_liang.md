@@ -46,6 +46,7 @@
 * 用户自定义的变量 ** \{\{ defined_name \}\} **
 
 index.html.j2文件：
+
 ```
 <html>
 <title>#46 Demo</title>
