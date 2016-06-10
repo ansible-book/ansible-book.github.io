@@ -1,7 +1,7 @@
 # Summary
 
 * [声明](sheng_ming.md)
-* [介绍](README.md)
+* [什么是Ansible](README.md)
 * [Ansible的架构](chapter1.md)
    * [Ansible Tower的架构](ansible_towerde_jia_gou.md)
 * [Ansible上手](ansibleshang_shou.md)
