@@ -1,12 +1,12 @@
 # 命令行查看module的用法
 
 
-命令行查看module的命令是ansible-doc,语法如下:
+类似bash命令的man，ansible也可以通过命令行查看module的用法。命令是ansible-doc，语法如下:
 
 ```
 ansible-doc module_name
 ```
-例如, core module可以在如何目录下执行查看yum的用法
+例如, core module yum，可以在任何目录下执行查看yum的用法
 ```
 ansible-doc yum
 ```
