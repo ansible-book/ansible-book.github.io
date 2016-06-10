@@ -11,21 +11,18 @@
 ```bash
 $ ansible-playbook deploy.yml
 ```
-查看输出的细节
 
-
+查看输出的细节  
 ```
 ansible-playbook playbook.yml --list-hosts
 ```
 
-查看该脚本影响哪些hosts
-
+查看该脚本影响哪些hosts  
 ```
 ansible-playbook playbook.yml --list-hosts
 ```
 
-并行执行脚本
-
+并行执行脚本  
 ```
 ansible-playbook playbook.yml -f 10
 ```
