@@ -17,16 +17,17 @@
 
 ## 使用命令行变量
 
-在命令行里面传值得的方法：
-
+在命令行里面传值得的方法：  
 ```
 ansible-playbook e33_var_in_command.yml --extra-vars "hosts=web user=root"
 ```
-还可以用json格式传递参数：
+
+还可以用json格式传递参数：  
 ```
 ansible-playbook e33_var_in_command.yml --extra-vars "{'hosts':'vm-rhel7-1', 'user':'root'}"
 ```
-还可以将参数放在文件里面：
+
+还可以将参数放在文件里面：  
 ```
 ansible-playbook e33_var_in_command.yml --extra-vars "@vars.json"
 ```
