@@ -1,6 +1,10 @@
 # Playbook基本语法
 
 
+本节列举了写第一个Playbook，你必须了解基本语法。
+
+随着你面临的机器越多，配属的需求越复杂，你可能需要了解后面介绍的一些稍微复杂逻辑语句。
+
 ## 执行Playbook语法
 
 
@@ -29,7 +33,15 @@ ansible-playbook playbook.yml -f 10
 
 ## 完整的deploy.yml示例
 
-
+最基本的playbook脚本分为三个部分:
+1. 在什么机器上以什么身份执行
+  * hosts
+  * users
+  * ...
+2. 执行的任务是都有什么
+  * tasks
+3. 善后的任务都有什么
+  * handlers
 
 ```yml
 ---
@@ -53,15 +65,7 @@ ansible-playbook playbook.yml -f 10
 ```
 
 
-最基本的playbook脚本分为三个部分:
-1. 在什么机器上以什么身份执行
-  * hosts
-  * users
-  * ...
-2. 执行的任务是都有什么
-  * tasks
-3. 善后的任务都有什么
-  * handlers
+
 
 
 
