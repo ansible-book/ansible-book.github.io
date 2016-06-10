@@ -77,6 +77,7 @@ handlers:
 
 ## include里面的handlers在外面调用不了
 不知道为什么有一处文档里面写可以调用。文档下面两个地方提到include里面的handlers，但是两处是矛盾的:
+
 * hander的文档写不能调用
 http://docs.ansible.com/ansible/playbooks_intro.html
 * include的文档写能调用
