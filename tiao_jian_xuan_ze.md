@@ -7,8 +7,9 @@
 ## When语句
 
 
-有时候用户有可能需要某一个主机越过某一个特定的步骤.这个过程就可以简单的像在某一个特定版本的系统上 少装了一个包一样或者像在一个满了的文件系统上执行清理操作一样. 这些操作在Ansible上,若使用`when`语句都异常简单.
+有时候用户有可能需满足特定条件才执行某一个特定的步骤。在某一个特定版本的系统上装包，或者只在磁盘空间满了的文件系统上执行清理操作一样。这些操作在Ansible上，使用`when`语句都非常简单.
 
+主机为Debian Linux立刻关机
 ```
 tasks:
   - name: "shutdown Debian flavored systems"
@@ -16,7 +17,7 @@ tasks:
     when: ansible_os_family == "Debian"
 ```
 
-忽略错误
+根据action的执行结果，来决定接下来执行的action。
 
 ```
 tasks:
@@ -31,12 +32,7 @@ tasks:
     when: result|skipped
 ```
 
-如何查看远程中的系统变量
-```
-ansible hostname.example.com -m setup
-```
-
-返回值的转换
+远程中的系统变量facts变量作为when的跳进，用“|int”还可以转换返回值的类型：
 ```
 ---
 - hosts: web
