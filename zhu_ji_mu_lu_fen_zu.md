@@ -1,6 +1,6 @@
 # 远程主机的分组
 
-简单的分组[]内是组名， [webservers]， [webservers]，[databases]等
+简单的分组[]内是组名
 ```ini
 mail.example.com
 
