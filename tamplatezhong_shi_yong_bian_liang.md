@@ -1,6 +1,8 @@
 # 文件模板中使用的变量
 
 
+文件模板即template。Ansible使用的文件是python的一个j2的模板。
+
 ## template变量的定义
 在playbook中定义的变量，可以直接在template中使用。
 
