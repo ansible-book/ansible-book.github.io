@@ -55,9 +55,10 @@ https://github.com/ansible-book/ansible-first-book-examples/blob/master/handlers
 
 ```
 
-## 只有当TASKS的执行状态是changed时,才会执行handler
+## action是Changed ,才会执行handler
 
 
+只有当TASKS种的action的执行状态是changed时，才会触发notify handler的执行。
 
 下面的脚本执行两次,执行结果是不同的:
 
