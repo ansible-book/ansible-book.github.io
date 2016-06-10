@@ -4,14 +4,14 @@
 
 ## 可以配置什麼?
 
-从基本的，主机目录管理的文件inventory，额外的module放置路径library，管理节点上临时文件的位置，远程主机的临时文件位置
+从基本的，主机目录文件"inventory"，extra module放置路径"library"，管理节点上临时文件的位置"remote_tmp"，远程主机的临时文件位置"local_tmp"
 ```
 inventory      = /etc/ansible/hosts
 library        = /usr/share/my_modules/
 remote_tmp     = $HOME/.ansible/tmp
 local_tmp      = $HOME/.ansible/tmp
 ```
-到高级的，连接端口号，超时时间等。
+到高级的，连接端口号"accelerate_port"，超时时间等。
 ```
 accelerate_port = 5099
 accelerate_timeout = 30
