@@ -11,7 +11,7 @@
         template: src={{ apache_config }} dest=/etc/httpd/conf.d/{{ apache_config }}  
 ```
 
-在Playbook中使用变量文件来使用
+在Playbook中使用变量文件定义变量
 
 ```
 - hosts: webservers
@@ -22,7 +22,7 @@
         template: src={{ apache_config }} dest=/etc/httpd/conf.d/{{ apache_config }}  
 ```
 
-vars/server_vars.yml 内容
+vars/server_vars.yml的内容为：
 
 ```
 apache_config: labs.conf
@@ -32,7 +32,9 @@ apache_config: labs.conf
 ## YAML的陷阱
 
 
-下面的代码会报错，YAML值不能以{ 开头:
+YAML的陷阱是YAML和Ansible Playbook的变量语法不能在一起好好工作了。这里特指冒号后面的值不能以{ 开头。
+
+下面的代码会报错:
 ```
 - hosts: app_servers
   vars:
