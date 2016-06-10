@@ -28,7 +28,6 @@ playbook deploy.yml包含下面几个关键字，每个关键字的含义：
 * **vars**： 变量
 * **tasks**: playbook的核心，定义顺序执行的动作action。每个action调用一个ansbile module。 
 
-
 * > action 语法： ```module： module_parameter=module_value```
 * > 常用的module有yum、copy、template等，module在ansible的作用，相当于bash脚本中yum，copy这样的命令。下一节会介绍。
 
