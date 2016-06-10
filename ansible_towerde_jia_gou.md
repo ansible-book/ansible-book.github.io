@@ -22,6 +22,6 @@ Ansile Tower则是针对解决企业级用户以上两个需求的，ansible tow
 
 说了这么多，看下面这张架构图就清晰了：
 
+![](ansible-tower-arti-2nd.png)
 
-![](ansible-tower-arti.png)
 
