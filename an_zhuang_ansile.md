@@ -9,7 +9,7 @@
 * 安裝Ansible软件
 
 ```
-$ # Redhat Linux上Ansible目前放在的epel源中
+$ # Redhat Linux上，Ansible目前放在的epel源中
 $ sudo yum install epel-release 
 $ #Fedora 直接安装包既可
 $ sudo yum install ansible -y 
