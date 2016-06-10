@@ -1,5 +1,11 @@
 # template中使用变量
 
+
+## template变量的定义
+在playbook中定义的变量，可以直接在template中使用。
+
+下面的playbook脚本中使用了template module来拷贝文件index.html.j2，并且替换了index.html.j2中的变量为playbook中定义变量值。
+
 ```
 ---
 - hosts: web
@@ -29,12 +35,13 @@
       service: name=httpd state=restarted
 
 ```
+## template变量的使用
 
-在template中可以直接使用系统变量和用户自定义的变量
+在template index.html.j2中可以直接使用系统变量和用户自定义的变量
 
-系统变量 ** \{\{ ansible_hostname \}\} **, ** \{\{ ansible_default_ipv4.address \}\} **
+* 系统变量 ** \{\{ ansible_hostname \}\} **, ** \{\{ ansible_default_ipv4.address \}\} **
 
-用户自定义的变量 ** \{\{ defined_name \}\} **
+* 用户自定义的变量 ** \{\{ defined_name \}\} **
 
 
 ```
