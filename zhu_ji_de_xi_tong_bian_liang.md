@@ -64,10 +64,11 @@ $ ansible all -m setup -u root
 ```
 那么可以通过下面的两种方式访问复杂的变量中的子属性:
 
+中括号：  
 ```
 {{ ansible_ens3["ipv4"]["address"] }}
 ```
-
+点号：
 ```
 {{ ansible_ens3.ipv4.address }}
 ```
