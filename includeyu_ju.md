@@ -1,6 +1,6 @@
 # Include语句
 
-Include语句的功能，基本的代码重用机制。重用tasks
+Include语句的功能，基本的代码重用机制。主要重用tasks。
 
 ## 普通用法
 
@@ -76,13 +76,13 @@ handlers:
 ```
 
 ## include里面的handlers在外面调用不了
-不知道为什么文档里面写可以调用,文档的两个有矛盾:
+不知道为什么有一处文档里面写可以调用。文档的两个下面两个地方提到include里面的handlers，但是两处是矛盾的:
 * hander的文档写不能调用
 http://docs.ansible.com/ansible/playbooks_intro.html
 * include的文档写能调用
 http://docs.ansible.com/ansible/playbooks_roles.html#task-include-files-and-encouraging-reuse
 
-下面的例子中是不能调用include里面的handler的
+通过下面的例子实测后，是不能调用include里面的handler的。
 
 ```
 ---
