@@ -34,6 +34,7 @@ ansible-playbook playbook.yml -f 10
 ## 完整的deploy.yml示例
 
 最基本的playbook脚本分为三个部分:
+
 1. 在什么机器上以什么身份执行
   * hosts
   * users
