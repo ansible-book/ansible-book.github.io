@@ -9,10 +9,10 @@
 * 安裝Ansible软件
 
 ```
-$ # Ansible目前放在Redhat Linux上的epel包
-$ # Fedora 直接安装包既可
-$ subscription-manager repos --enable=rhel-7-server-optional-rpms 
-$ sudo yum install ansible -y #Fedora 直接安装包既可
+$ # Redhat Linux上Ansible目前放在的epel源中
+$ sudo yum install epel-release 
+$ #Fedora 直接安装包既可
+$ sudo yum install ansible -y 
 ```
 
 * 配置Ansible管理节点和主机的连接
