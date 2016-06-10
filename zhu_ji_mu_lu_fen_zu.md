@@ -1,5 +1,6 @@
 # 远程主机的分组
 
+简单的分组[]内是组名， [webservers]， [webservers]，[databases]等
 ```ini
 mail.example.com
 
@@ -20,7 +21,7 @@ db-[a:f].example.com
 
 ```
 
-分组的子组
+分组的子组[usa:children]
 
 ```
 [atlanta]
