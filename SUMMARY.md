@@ -1,6 +1,7 @@
 # Summary
 
 * [介绍](README.md)
+* [声明](sheng_ming.md)
 * [Ansible的架构](chapter1.md)
    * [Ansible Tower的架构](ansible_towerde_jia_gou.md)
 * [Ansible上手](ansibleshang_shou.md)
@@ -39,5 +40,4 @@
 * [推荐的参考资料](tui_jian_de_can_kao_zi_liao.md)
    * [YAML语法基础](yamlyu_fa_ji_chu.md)
    * [待续](dai_xu.md)
-* [声明](sheng_ming.md)
 
