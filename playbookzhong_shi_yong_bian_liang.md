@@ -1,6 +1,6 @@
 # Playbook中使用的变量
 
-在Playbook中使用，需要用{{ }}引用以来即可：
+在Playbook中使用，需要用"{{ }}"引用以来即可：
 
 ```
 - hosts: webservers
@@ -32,7 +32,7 @@ apache_config: labs.conf
 ## YAML的陷阱
 
 
-YAML的陷阱是YAML和Ansible Playbook的变量语法不能在一起好好工作了。这里特指冒号后面的值不能以{ 开头。
+YAML的陷阱是YAML和Ansible Playbook的变量语法不能在一起好好工作了。这里特指冒号后面的值不能以"{ "开头。
 
 下面的代码会报错:
 ```
@@ -42,7 +42,7 @@ YAML的陷阱是YAML和Ansible Playbook的变量语法不能在一起好好工�
 ```
 
 
-解决办法：要在{ 开始的值**加上引号**:
+解决办法：要在"{ "开始的值**加上引号**:
 
 ```
 - hosts: app_servers
