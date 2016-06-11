@@ -1,6 +1,6 @@
 # Playbook中使用的变量
 
-在Playbook中使用，需要用"{{ }}"引用以来即可：
+在Playbook中使用，需要用\{\{ \}\}引用以来即可：
 
 ```
 - hosts: webservers
