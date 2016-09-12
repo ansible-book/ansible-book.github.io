@@ -2,14 +2,12 @@
 
 类似于编程语言的if
 
-
-
 ## When语句
-
 
 有时候用户有可能需满足特定条件才执行某一个特定的步骤。在某一个特定版本的系统上装包，或者只在磁盘空间满了的文件系统上执行清理操作一样。这些操作在Ansible上，使用`when`语句都非常简单.
 
 主机为Debian Linux立刻关机
+
 ```
 tasks:
   - name: "shutdown Debian flavored systems"
@@ -32,7 +30,8 @@ tasks:
     when: result|skipped
 ```
 
-远程中的系统变量facts变量作为when的跳进，用“|int”还可以转换返回值的类型：
+远程中的系统变量facts变量作为when的条件，用“\|int”还可以转换返回值的类型：
+
 ```
 ---
 - hosts: web
@@ -40,7 +39,6 @@ tasks:
     - debug: msg="only on Red Hat 7, derivatives, and later"
       when: ansible_os_family == "RedHat" and ansible_lsb.major_release|int >= 6
 ```
-
 
 ## 条件表达式
 
@@ -50,18 +48,23 @@ vars:
 ```
 
 基本款
+
 ```
 tasks:
     - shell: echo "This certainly is epic!"
       when: epic
 ```
+
 否定款：
+
 ```
 tasks:
     - shell: echo "This certainly isn't epic!"
       when: not epic
 ```
+
 变量定义款
+
 ```
 tasks:
     - shell: echo "I've got '{{ foo }}' and am not afraid to use it!"
@@ -70,6 +73,7 @@ tasks:
     - fail: msg="Bailing out. this play requires 'bar'"
       when: bar is not defined
 ```
+
 数值表达款
 
 ```
@@ -87,8 +91,8 @@ tasks:
 
 ```
 
-
 ## 与Role一起用
+
 ```
 - hosts: webservers
   roles:
