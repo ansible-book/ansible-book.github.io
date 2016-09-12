@@ -13,7 +13,7 @@ $ ansible-playbook deploy.yml
 查看输出的细节
 
 ```
-ansible-playbook playbook.yml --list-hosts
+ansible-playbook playbook.yml  --verbose
 ```
 
 查看该脚本影响哪些hosts
@@ -33,14 +33,17 @@ ansible-playbook playbook.yml -f 10
 最基本的playbook脚本分为三个部分:
 
 1. 在什么机器上以什么身份执行
+
   * hosts
   * users
   * ...
 
 2. 执行的任务是都有什么
+
   * tasks
 
 3. 善后的任务都有什么
+
   * handlers
 
 
