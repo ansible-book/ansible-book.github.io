@@ -1,6 +1,7 @@
 # 远程主机的分组
 
-简单的分组[]内是组名
+简单的分组\[\]内是组名
+
 ```ini
 mail.example.com
 
@@ -21,7 +22,7 @@ db-[a:f].example.com
 
 ```
 
-分组的子组[usa:children]
+分组usa的子组还可以是其它的组,例如\[usa:children\]中还可以子组southeast, \[southeast:children\]中还可以包含atlanta和releigh
 
 ```
 [atlanta]
@@ -44,3 +45,4 @@ southwest
 northwest
 
 ```
+
