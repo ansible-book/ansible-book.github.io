@@ -6,12 +6,31 @@
 
 ## 语法
 
-task的基本写法
+task的基本写法:
 
 ```
 tasks:
   - name: make sure apache is running
     service: name=httpd state=running
+```
+
+其中name是可选的，也可以简写成下面的例子。
+
+```
+tasks:
+  - service: name=httpd state=running
+```
+
+写name的task在playbook执行时，会显示对应的名字，信息更友好、丰富。写name是个好习惯！
+```
+TASK: [make sure apache is running] ************************************************************* 
+changed: [yourhost]
+```
+
+没有写name的task在playbook执行时，直接显示对应的task语法。
+```
+TASK: [service name=httpd state=running] ************************************** 
+changed: [yourhost]
 ```
 
 参数太长可以分隔到多行
