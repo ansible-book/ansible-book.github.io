@@ -1,3 +1,10 @@
+---
+# You don't need to edit this file, it's empty on purpose.
+# Edit theme's home layout instead if you wanna make some changes
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+layout: home
+---
+
 # 安装Ansile
 
 这里以RedHat系Linux为例，其他系统请参考ansible的官网

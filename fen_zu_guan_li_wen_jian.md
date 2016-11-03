@@ -1,3 +1,9 @@
+---
+# You don't need to edit this file, it's empty on purpose.
+# Edit theme's home layout instead if you wanna make some changes
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+layout: home
+---
 # 按目录结构存储变量
 
 假设inventory文件为/etc/ansible/hosts，那么相关的hosts和group变量可以放在下面的目录结构下
