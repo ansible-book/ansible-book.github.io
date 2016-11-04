@@ -20,7 +20,9 @@ Include语句的功能，基本的代码重用机制。主要重用tasks。
   - name: insert firewalld rule for httpd
     firewalld: port=80/tcp permanent=true state=enabled immediate=yes
 ```
+
 main.yml文件中调用include的方法:
+
 ```
   tasks:
     - include: tasks/firewall_httpd_default.yml
@@ -31,6 +33,7 @@ main.yml文件中调用include的方法:
 
 
 加参数
+
 ```
 tasks:
   - include: tasks/firewall.yml port=80
@@ -41,6 +44,7 @@ tasks:
 
 
 还可以这样加：
+
 ```
 tasks:
 
@@ -53,18 +57,21 @@ tasks:
 ```
 
 还可以简写成：
+
 ```
 tasks:
  - { include: wordpress.yml, wp_user: timmy, ssh_keys: [ 'keys/one.txt', 'keys/two.txt' ] }
 ```
 
 在handlers里面加include
+
 ```
 handlers:
   - include: handlers/handlers.yml
 ```
 
 在全局加include时，tasks和handlers不能有include
+
 ```
 - name: this is a play at the top level of a file
   hosts: all

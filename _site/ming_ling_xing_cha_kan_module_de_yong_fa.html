@@ -62,20 +62,23 @@
 
 <h1 id="module">命令行查看module的用法</h1>
 
-<p>类似bash命令的man，ansible也可以通过命令行查看module的用法。命令是ansible-doc，语法如下:<br />
-<code class="highlighter-rouge">
-ansible-doc module_name
-</code></p>
+<p>类似bash命令的man，ansible也可以通过命令行查看module的用法。命令是ansible-doc，语法如下:</p>
 
-<p>core module可以在任何目录下执行。例如查看yum的用法：<br />
-<code class="highlighter-rouge">
-ansible-doc yum
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>ansible-doc module_name
+</code></pre>
+</div>
 
-<p>extra module必须在配置了extra module的目录下查看用法(行为当前目录下的playbook是一致的):
-<code class="highlighter-rouge">
-ansible-doc yum_repository
-</code></p>
+<p>core module可以在任何目录下执行。例如查看yum的用法：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ansible-doc yum
+</code></pre>
+</div>
+
+<p>extra module必须在配置了extra module的目录下查看用法(行为当前目录下的playbook是一致的):</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ansible-doc yum_repository
+</code></pre>
+</div>
 
   
   

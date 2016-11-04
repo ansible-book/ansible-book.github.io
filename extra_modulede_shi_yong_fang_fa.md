@@ -22,14 +22,16 @@ git clone https://github.com/ansible/ansible-modules-extras.git
 
 **方法1 - 改ansible默认配置文件/etc/ansible/ansible.cfg**
 
-修改ansible配置文件/etc/ansible/ansible.cfg, 添加一行  
+修改ansible配置文件/etc/ansible/ansible.cfg, 添加一行 
+ 
 ```
 library	= /home/jshi/software/ansible-modules-extras/
 ```
 
 **方法2 - 改ansible当前目录下配置文件ansible.cfg**
 
-改ansible playbook当前的目录下的配置文件ansible.cfg，那么只**对当前目录的playbook生效**。对所有其它目录，包括父目录和子目录的playbook都不生效。  
+改ansible playbook当前的目录下的配置文件ansible.cfg，那么只**对当前目录的playbook生效**。对所有其它目录，包括父目录和子目录的playbook都不生效。 
+ 
 ```
 library/ansible-modules-extras
 ansible.cfg
@@ -37,7 +39,8 @@ use_extra_module.yml
 subfolder/use_extra_module_will_throw_error.yml
 ```
 
-在当前目录的ansible.cfg中，可以使用相对路径：  
+在当前目录的ansible.cfg中，可以使用相对路径： 
+ 
 ```
 library = library/ansible-modules-extras/
 ```

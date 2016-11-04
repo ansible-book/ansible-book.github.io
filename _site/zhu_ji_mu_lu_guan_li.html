@@ -72,22 +72,25 @@
 
 <h3 id="section-2">修改主机目录的配置文件</h3>
 
-<p>/etc/ansible/ansible.cfg
-<code class="highlighter-rouge">
-...
+<p>/etc/ansible/ansible.cfg</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>...
 inventory      = /etc/ansible/hosts
 ...
-</code></p>
+</code></pre>
+</div>
 
 <h3 id="section-3">命令行中传递主机目录配置文件</h3>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>$ ansible-playbook -i hosts site.yml
 </code></pre>
 </div>
-<p>或者参数–inventory-file
-<code class="highlighter-rouge">
-$ ansible-playbook --inventory-file hosts site.yml
-</code></p>
+
+<p>或者参数–inventory-file</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ansible-playbook --inventory-file hosts site.yml
+</code></pre>
+</div>
 
 
   

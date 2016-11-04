@@ -79,20 +79,23 @@
 
 <h2 id="section-2">使用命令行变量</h2>
 
-<p>在命令行里面传值得的方法：<br />
-<code class="highlighter-rouge">
-ansible-playbook e33_var_in_command.yml --extra-vars "hosts=web user=root"
-</code></p>
+<p>在命令行里面传值得的方法：</p>
 
-<p>还可以用json格式传递参数：<br />
-<code class="highlighter-rouge">
-ansible-playbook e33_var_in_command.yml --extra-vars "{'hosts':'vm-rhel7-1', 'user':'root'}"
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>ansible-playbook e33_var_in_command.yml --extra-vars "hosts=web user=root"
+</code></pre>
+</div>
 
-<p>还可以将参数放在文件里面：<br />
-<code class="highlighter-rouge">
-ansible-playbook e33_var_in_command.yml --extra-vars "@vars.json"
-</code></p>
+<p>还可以用json格式传递参数：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ansible-playbook e33_var_in_command.yml --extra-vars "{'hosts':'vm-rhel7-1', 'user':'root'}"
+</code></pre>
+</div>
+
+<p>还可以将参数放在文件里面：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ansible-playbook e33_var_in_command.yml --extra-vars "@vars.json"
+</code></pre>
+</div>
 
   
   

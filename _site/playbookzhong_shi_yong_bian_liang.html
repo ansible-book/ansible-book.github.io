@@ -94,12 +94,13 @@
 
 <p>YAML的陷阱是YAML和Ansible Playbook的变量语法不能在一起好好工作了。这里特指冒号后面的值不能以”{ “开头。</p>
 
-<p>下面的代码会报错:
-<code class="highlighter-rouge">
-- hosts: app_servers
+<p>下面的代码会报错:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>- hosts: app_servers
   vars:
       app_path: /22
-</code></p>
+</code></pre>
+</div>
 
 <p>解决办法：要在”{ “开始的值<strong>加上引号</strong>:</p>
 

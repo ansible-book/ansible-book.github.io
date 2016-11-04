@@ -41,6 +41,7 @@ key和value已冒号加空格分隔。
 ## 复杂的字典
 
 字典的嵌套
+
 ```
 # An employee record
 martin:
@@ -79,6 +80,7 @@ foo: "somebody said I should put a colon here: so I did"
 ```
 
 变量的引用要加引号
+
 ```
 foo: "{{ variable }}" 
 ```

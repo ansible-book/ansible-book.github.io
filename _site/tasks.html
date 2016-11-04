@@ -85,17 +85,19 @@
 </code></pre>
 </div>
 
-<p>写name的task在playbook执行时，会显示对应的名字，信息更友好、丰富。写name是个好习惯！
-<code class="highlighter-rouge">
-TASK: [make sure apache is running] ************************************************************* 
-changed: [yourhost]
-</code></p>
+<p>写name的task在playbook执行时，会显示对应的名字，信息更友好、丰富。写name是个好习惯！</p>
 
-<p>没有写name的task在playbook执行时，直接显示对应的task语法。
-<code class="highlighter-rouge">
-TASK: [service name=httpd state=running] ************************************** 
+<div class="highlighter-rouge"><pre class="highlight"><code>TASK: [make sure apache is running] ************************************************************* 
 changed: [yourhost]
-</code></p>
+</code></pre>
+</div>
+
+<p>没有写name的task在playbook执行时，直接显示对应的task语法。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>TASK: [service name=httpd state=running] ************************************** 
+changed: [yourhost]
+</code></pre>
+</div>
 
 <p>参数太长可以分隔到多行</p>
 

@@ -24,6 +24,7 @@ layout: home
 
 
 /etc/ansible/ansible.cfg
+
 ```
 ...
 inventory      = /etc/ansible/hosts
@@ -38,7 +39,9 @@ inventory      = /etc/ansible/hosts
 ```
 $ ansible-playbook -i hosts site.yml
 ```
+
 或者参数--inventory-file
+
 ```
 $ ansible-playbook --inventory-file hosts site.yml
 ```

@@ -78,11 +78,12 @@ database_server: storage.example.org
 </code></pre>
 </div>
 
-<p>如果对应的名字为目录名，ansible会读取这个目录下面所有文件的内容
-<code class="highlighter-rouge">
-/etc/ansible/group_vars/raleigh/db_settings
+<p>如果对应的名字为目录名，ansible会读取这个目录下面所有文件的内容</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/etc/ansible/group_vars/raleigh/db_settings
 /etc/ansible/group_vars/raleigh/cluster_settings
-</code></p>
+</code></pre>
+</div>
 
 <p>group_vars/ 和 host_vars/ 目录可放在 inventory 目录下,或是 playbook 目录下. 如果两个目录下都存在,那么 <strong>playbook 目录下的配置</strong>会<strong>覆盖</strong> inventory 目录的配置.</p>
 

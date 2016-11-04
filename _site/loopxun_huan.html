@@ -64,15 +64,16 @@
 
 <h2 id="section">标准循环</h2>
 
-<p>为了保持简洁,重复的任务可以用以下简写的方式:
-<code class="highlighter-rouge">
-- name: add several users
+<p>为了保持简洁,重复的任务可以用以下简写的方式:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>- name: add several users
   user: name= state=present groups=wheel
   with_items:
      - testuser1
      - testuser2
-</code>
-如果你在变量文件中或者 ‘vars’ 区域定义了一组YAML列表,你也可以这样做:</p>
+</code></pre>
+</div>
+<p>如果你在变量文件中或者 ‘vars’ 区域定义了一组YAML列表,你也可以这样做:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>vars:
   somelist: ["testuser1", "testuser2"]

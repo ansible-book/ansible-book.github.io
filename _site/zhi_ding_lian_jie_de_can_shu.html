@@ -64,19 +64,22 @@
 
 <h2 id="section-1">参数</h2>
 
-<p>指定Server的连接参数，其中包括连接方法，用户等。
-```ini
-[targets]</p>
+<p>指定Server的连接参数，其中包括连接方法，用户等。</p>
 
-<p>localhost              ansible_connection=local
-other1.example.com     ansible_connection=ssh        ansible_user=mpdehaan
-other2.example.com     ansible_connection=ssh        ansible_user=mdehaan</p>
+<div class="language-ini highlighter-rouge"><pre class="highlight"><code><span class="nn">[targets]</span>
 
-<p>[atlanta]
-host1 http_port=80 maxRequestsPerChild=808
-host2 http_port=303 maxRequestsPerChild=909
-```
-所有可以指定的参数在文档中
+<span class="err">localhost</span>              <span class="py">ansible_connection</span><span class="p">=</span><span class="s">local</span>
+<span class="err">other1.example.com</span>     <span class="py">ansible_connection</span><span class="p">=</span><span class="s">ssh        ansible_user=mpdehaan</span>
+<span class="err">other2.example.com</span>     <span class="py">ansible_connection</span><span class="p">=</span><span class="s">ssh        ansible_user=mdehaan</span>
+
+
+<span class="nn">[atlanta]</span>
+<span class="err">host1</span> <span class="py">http_port</span><span class="p">=</span><span class="s">80 maxRequestsPerChild=808</span>
+<span class="err">host2</span> <span class="py">http_port</span><span class="p">=</span><span class="s">303 maxRequestsPerChild=909</span>
+</code></pre>
+</div>
+
+<p>所有可以指定的参数在文档中
 http://docs.ansible.com/ansible/intro_inventory.html#list-of-behavioral-inventory-parameters</p>
 
 <h2 id="section-2">变量</h2>

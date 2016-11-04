@@ -23,6 +23,7 @@ database_server: storage.example.org
 ```
 
 如果对应的名字为目录名，ansible会读取这个目录下面所有文件的内容
+
 ```
 /etc/ansible/group_vars/raleigh/db_settings
 /etc/ansible/group_vars/raleigh/cluster_settings

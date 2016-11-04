@@ -69,9 +69,10 @@
 <div class="highlighter-rouge"><pre class="highlight"><code>$ ansible all -m setup -u root
 </code></pre>
 </div>
-<p>怎样在playbook中使用facts变量呢，答案是直接使用：
-<code class="highlighter-rouge">
----
+
+<p>怎样在playbook中使用facts变量呢，答案是直接使用：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>---
 - hosts: all
   user: root
   tasks:
@@ -83,7 +84,8 @@
   - name install ntp on redhat linux
     yum: name=git state=present
     when: ansible_os_family == "RedHat"
-</code></p>
+</code></pre>
+</div>
 
 <h2 id="facts-1">使用复杂facts变量</h2>
 
@@ -119,29 +121,29 @@
 ...
 </code></pre>
 </div>
+
 <p>那么可以通过下面的两种方式访问复杂的变量中的子属性:</p>
 
-<p>中括号：<br />
-```</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>点号：
-</code></pre>
-</div>
+<p>中括号：</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>
-
-## 关闭facts
-
-
-在Playbook中,如果写gather_facts来控制是否收集远程系统的信息.如果不收集系统信息,那么上面的变量就不能在该playybook中使用了.
-
 </code></pre>
 </div>
-<ul>
-  <li>hosts: whatever
-gather_facts: no
-```</li>
-</ul>
+
+<p>点号：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>
+</code></pre>
+</div>
+
+<h2 id="facts-2">关闭facts</h2>
+
+<p>在Playbook中,如果写gather_facts来控制是否收集远程系统的信息.如果不收集系统信息,那么上面的变量就不能在该playybook中使用了.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>- hosts: whatever
+  gather_facts: no
+</code></pre>
+</div>
 
   
   

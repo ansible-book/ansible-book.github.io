@@ -28,12 +28,14 @@ tasks:
 ```
 
 写name的task在playbook执行时，会显示对应的名字，信息更友好、丰富。写name是个好习惯！
+
 ```
 TASK: [make sure apache is running] ************************************************************* 
 changed: [yourhost]
 ```
 
 没有写name的task在playbook执行时，直接显示对应的task语法。
+
 ```
 TASK: [service name=httpd state=running] ************************************** 
 changed: [yourhost]

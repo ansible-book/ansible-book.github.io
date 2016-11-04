@@ -75,67 +75,69 @@
     firewalld: port=80/tcp permanent=true state=enabled immediate=yes
 </code></pre>
 </div>
-<p>main.yml文件中调用include的方法:
-<code class="highlighter-rouge">
-  tasks:
+
+<p>main.yml文件中调用include的方法:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  tasks:
     - include: tasks/firewall_httpd_default.yml
-</code></p>
+</code></pre>
+</div>
 
 <h2 id="section-1">高级用法-加参数</h2>
 
-<p>加参数
-<code class="highlighter-rouge">
-tasks:
+<p>加参数</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>tasks:
   - include: tasks/firewall.yml port=80
   - include: tasks/firewall.yml port=3260
   - include: tasks/firewall.yml port=423
-</code></p>
+</code></pre>
+</div>
 
-<p>还可以这样加：
-```
-tasks:</p>
+<p>还可以这样加：</p>
 
-<ul>
-  <li>include: wordpress.yml
-vars:
-    wp_user: timmy
-    ssh_keys:
-      - keys/one.txt
-      - keys/two.txt
-```</li>
-</ul>
+<div class="highlighter-rouge"><pre class="highlight"><code>tasks:
 
-<p>还可以简写成：
-<code class="highlighter-rouge">
-tasks:
+  - include: wordpress.yml
+    vars:
+        wp_user: timmy
+        ssh_keys:
+          - keys/one.txt
+          - keys/two.txt
+</code></pre>
+</div>
+
+<p>还可以简写成：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>tasks:
  - { include: wordpress.yml, wp_user: timmy, ssh_keys: [ 'keys/one.txt', 'keys/two.txt' ] }
-</code></p>
+</code></pre>
+</div>
 
-<p>在handlers里面加include
-<code class="highlighter-rouge">
-handlers:
+<p>在handlers里面加include</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>handlers:
   - include: handlers/handlers.yml
-</code></p>
+</code></pre>
+</div>
 
-<p>在全局加include时，tasks和handlers不能有include
-```
-- name: this is a play at the top level of a file
+<p>在全局加include时，tasks和handlers不能有include</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>- name: this is a play at the top level of a file
   hosts: all
-  remote_user: root</p>
+  remote_user: root
 
-<p>tasks:</p>
+  tasks:
 
-<ul>
-  <li>
-    <p>name: say hi
-tags: foo
-shell: echo “hi…”</p>
-  </li>
-  <li>include: load_balancers.yml</li>
-  <li>include: webservers.yml</li>
-  <li>include: dbservers.yml
-```</li>
-</ul>
+  - name: say hi
+    tags: foo
+    shell: echo "hi..."
+
+- include: load_balancers.yml
+- include: webservers.yml
+- include: dbservers.yml
+</code></pre>
+</div>
 
 <h2 id="includehandlers">include里面的handlers在外面调用不了</h2>
 <p>不知道为什么有一处文档里面写可以调用。文档下面两个地方提到include里面的handlers，但是两处是矛盾的:</p>

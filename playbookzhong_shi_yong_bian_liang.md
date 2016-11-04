@@ -41,6 +41,7 @@ apache_config: labs.conf
 YAML的陷阱是YAML和Ansible Playbook的变量语法不能在一起好好工作了。这里特指冒号后面的值不能以"{ "开头。
 
 下面的代码会报错:
+
 ```
 - hosts: app_servers
   vars:

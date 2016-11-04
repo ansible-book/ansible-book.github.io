@@ -98,9 +98,7 @@ https://github.com/shijingjing1221/ansible-first-book-examples/blob/master/handl
   - name: call by /tmp/hosts
     debug: msg="call first time"
   - name: call by /tmp/hosts.random_number
-    debug: msg="call by /tmp/hosts.random_number"
-
-  
+    debug: msg="call by /tmp/hosts.random_number" 
 ```
 
 
