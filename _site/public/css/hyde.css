@@ -90,6 +90,9 @@ html,body {
 .sidebar-nav {
   margin-bottom: 1rem;
   font-size: small;
+  height: 90%;
+  width: 16rem;
+  overflow: auto;
 }
 .sidebar-nav ul{
   list-style-position: outside;
@@ -120,7 +123,7 @@ a.sidebar-nav-item:focus {
     /*top: 1rem;*/
     /*left:   1rem;*/
     height: 95%;
-    overflow: auto;
+
   }
   .sidebar-foot {
     position: absolute;
