@@ -12,7 +12,7 @@ layout: home
 
 指定Server的连接参数，其中包括连接方法，用户等。
 
-```ini
+```
 [targets]
 
 localhost              ansible_connection=local

@@ -9,7 +9,7 @@ layout: home
 
 简单的分组\[\]内是组名
 
-```ini
+```
 mail.example.com
 
 [webservers]

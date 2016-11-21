@@ -26,9 +26,20 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-theme: minima
+# theme: minima
 gems:
   - jekyll-feed
 exclude:
   - Gemfile
   - Gemfile.lock
+# Setup
+title:            Ansible入门
+tagline:          '快速定位本书，请google“ansilbe入门”'
+description:      ''
+url:              http://getansible.com
+baseurl:          /
+
+author:
+  name:           'Jingjing Shi'
+  url:            https://github/shijingjing1221
+  email:          shijingjing02@163.com

@@ -39,7 +39,7 @@ playbook deploy.yml包含下面几个关键字，每个关键字的含义：
 * **handers**： 是playbook的event，默认不会执行，在action里触发才会执行。多次触发只执行一次。
 
 
-```yaml
+```
 ---
 - hosts: web
   vars:

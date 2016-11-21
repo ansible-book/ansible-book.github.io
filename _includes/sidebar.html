@@ -1,0 +1,20 @@
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+
+    <div class="sidebar-about">
+      <h2>
+        <a href="{{ site.baseurl }}">
+          {{ site.title }}
+        </a>
+      </h2>
+    </div>
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">目录</a>
+      {% include index.html %}
+
+    </nav>
+
+    
+  </div>
+  <div class="sidebar-foot">联系作者: shijingjing02@163.com</div>
+</div>

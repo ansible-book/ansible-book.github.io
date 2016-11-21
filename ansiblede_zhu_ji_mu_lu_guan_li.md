@@ -24,7 +24,7 @@ layout: home
 
 ### 最简单的hosts文件：
 
-```ini
+```
 192.168.1.50
 aserver.example.org
 bserver.example.org
@@ -32,7 +32,7 @@ bserver.example.org
 
 ### 带分类的hosts文件:
 
-```ini
+```
 mail.example.com
 
 [webservers]
