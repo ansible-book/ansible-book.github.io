@@ -26,7 +26,7 @@ host2 http_port=303 maxRequestsPerChild=909
 ```
 
 所有可以指定的参数在文档中
-http://docs.ansible.com/ansible/intro_inventory.html#list-of-behavioral-inventory-parameters
+[http://docs.ansible.com/ansible/intro_inventory.html#list-of-behavioral-inventory-parameters](http://docs.ansible.com/ansible/intro_inventory.html#list-of-behavioral-inventory-parameters)
 
 
 

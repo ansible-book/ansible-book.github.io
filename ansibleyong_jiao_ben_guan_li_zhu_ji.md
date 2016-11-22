@@ -25,6 +25,7 @@ deploy.yml的功能为web主机部署apache, 其中包含以下部署步骤：
 3. 拷贝默认的网页文件index.html；
 4. 启动apache服务；
 
+
 playbook deploy.yml包含下面几个关键字，每个关键字的含义：
 
 * **hosts**：为主机的IP，或者主机组名，或者关键字all
@@ -32,9 +33,9 @@ playbook deploy.yml包含下面几个关键字，每个关键字的含义：
 * **vars**： 变量
 * **tasks**: playbook的核心，定义顺序执行的动作action。每个action调用一个ansbile module。
 
-* > action 语法： `module： module_parameter=module_value`
+  > action 语法： `module： module_parameter=module_value`
 
-* > 常用的module有yum、copy、template等，module在ansible的作用，相当于bash脚本中yum，copy这样的命令。下一节会介绍。
+  > 常用的module有yum、copy、template等，module在ansible的作用，相当于bash脚本中yum，copy这样的命令。下一节会介绍。
 
 * **handers**： 是playbook的event，默认不会执行，在action里触发才会执行。多次触发只执行一次。
 

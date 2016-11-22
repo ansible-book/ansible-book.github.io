@@ -14,7 +14,7 @@ bash无论在命令行上执行，还是bash脚本中，都需要调用cd、ls�
 
 在bash，调用命令时可以跟不同的参数，每个命令的参数都是该命令自定义的；同样，ansible中调用module也可以跟不同的参数，每个module的参数也都是由module自定义的。
 
-每个module的用法可以查阅文档。http://docs.ansible.com/ansible/modules_by_category.html
+每个module的用法可以查阅文档。[http://docs.ansible.com/ansible/modules_by_category.html](http://docs.ansible.com/ansible/modules_by_category.html)
 
 
 
@@ -60,7 +60,7 @@ $ ansible web -m yum -a "name=httpd state=present"
 
 * Module是用Python写的。
 
-* Ansible提供一些常用的Module http://docs.ansible.com/ansible/modules_by_category.html
+* Ansible提供一些[常用的Module](http://docs.ansible.com/ansible/modules_by_category.html)
 
 * 通过命令ansible-doc可以查看module的用法
 

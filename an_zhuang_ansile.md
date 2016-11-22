@@ -33,7 +33,7 @@ $ # 拷贝ssh key到远程主机，ssh的时候就不需要输入密码了
 $ ssh-copy-id remoteuser@remoteserver
 $ # ssh的时候不会提示是否保存key
 $ ssh-keyscan remote_servers >> ~/.ssh/known_hosts
- ```
+```
 
 验证下有没有装好: 在管理节点执行下面的ssh命令，既**不需要输入密码**，也**不会提醒你存储key**，那就成功啦。
 
