@@ -55,7 +55,7 @@ html {
 
 .sidebar {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 0rem 1rem 2rem 1rem;
   color: rgba(255,255,255,.5);
   background-color: #202020;
 }
@@ -67,6 +67,7 @@ html {
     bottom: 0;
     width: 18rem;
     text-align: left;
+    overflow-y: auto;
   }
 }
 
@@ -90,9 +91,6 @@ html,body {
 .sidebar-nav {
   margin-bottom: 1rem;
   font-size: small;
-  height: 90%;
-  width: 16rem;
-  overflow: auto;
 }
 .sidebar-nav ul{
   list-style-position: outside;
@@ -118,19 +116,18 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 48em) {
   .sidebar-sticky {
-    position: absolute;
+    /*position: absolute;*/
     /*right:  1rem;*/
     /*top: 1rem;*/
     /*left:   1rem;*/
-    height: 95%;
+    /*height: 95%;*/
 
   }
   .sidebar-foot {
-    position: absolute;
-    /*position: fixed;*/
-    right:  1rem;
-    bottom: 1rem;
-    left:   1rem;
+    /*position: absolute;*/
+    right:  0.5rem;
+    /*bottom: 0rem;*/
+    left:   0.5rem;
   }
 }
 
