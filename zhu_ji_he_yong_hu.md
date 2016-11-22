@@ -20,4 +20,6 @@ layout: home
 
 脚本里用became的时候，执行的playbook的时候可以加参数--ask-become-pass
 
-```ansible-playbook deploy.yml --ask-become-pass```
+```
+ansible-playbook deploy.yml --ask-become-pass
+```

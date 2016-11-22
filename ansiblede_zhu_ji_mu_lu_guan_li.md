@@ -16,7 +16,7 @@ layout: home
 ## Host Inventory 配置文件：
 
 默认的文件是：
-**\/etc\/ansible\/hosts**
+**/etc/ansible/hosts**
 
 可以修改为其它的文件，下一章Ansible进阶中介绍。
 

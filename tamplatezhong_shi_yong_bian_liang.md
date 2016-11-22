@@ -47,32 +47,23 @@ layout: home
 
 在template index.html.j2中可以直接使用系统变量和用户自定义的变量
 
-* 系统变量 ** \{\{ ansible_hostname \}\} **, ** \{\{ ansible_default_ipv4.address \}\} **
+* 系统变量 **\{\{ ansible_hostname \}\}**, **\{\{ ansible_default_ipv4.address \}\}**
 
-* 用户自定义的变量 ** \{\{ defined_name \}\} **
+* 用户自定义的变量 **\{\{ defined_name \}\}**
 
-index.html.j2文件：  
+index.html.j2文件： 
+
 ```
 <html>
 <title>#46 Demo</title>
-
-<!--
-http://stackoverflow.com/questions/22223270/vertically-and-horizontally-center-a-div-with-css
-http://css-tricks.com/centering-in-the-unknown/
-http://jsfiddle.net/6PaXB/
--->
-
-<style>.block {text-align: center;margin-bottom:10px;}.block:before {content: '';display: inline-block;height: 100%;vertical-align: middle;margin-right: -0.25em;}.centered {display: inline-block;vertical-align: middle;width: 300px;}</style>
-
 <body>
 <div class="block" style="height: 99%;">
     <div class="centered">
-        <h1>#46 Demo {{ defined_name }}</h1>
-        <p>Served by {{ ansible_hostname }} ({{ ansible_default_ipv4.address }}).</p>
+        <h1>#46 Demo \{\{ defined_name \}\}</h1>
+        <p>Served by \{\{ ansible_hostname \}\} (\{\{ ansible_default_ipv4.address \}\}).</p>
     </div>
 </div>
 </body>
 </html>
-
 
 ```

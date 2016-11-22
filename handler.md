@@ -35,7 +35,7 @@ Tasks中的任务都是有状态的，changed或者ok。 在Ansible中，只在t
 
 在下面的例子里apache只执行一次
 
-https://github.com/ansible-book/ansible-first-book-examples/blob/master/handlers_state.yml
+[https://github.com/ansible-book/ansible-first-book-examples/blob/master/handlers_state.yml](https://github.com/ansible-book/ansible-first-book-examples/blob/master/handlers_state.yml)
 
 
 ```
@@ -76,7 +76,7 @@ https://github.com/ansible-book/ansible-first-book-examples/blob/master/handlers
 
 测试代码见：
 
-https://github.com/shijingjing1221/ansible-first-book-examples/blob/master/handlers_execution_time.yml
+[https://github.com/shijingjing1221/ansible-first-book-examples/blob/master/handlers_execution_time.yml](https://github.com/shijingjing1221/ansible-first-book-examples/blob/master/handlers_execution_time.yml)
 
 ```
 ---

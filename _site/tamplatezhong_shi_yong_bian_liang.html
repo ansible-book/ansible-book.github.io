@@ -172,37 +172,29 @@
 
 <ul>
   <li>
-    <p>系统变量 ** {{ ansible_hostname }} **, ** {{ ansible_default_ipv4.address }} **</p>
+    <p>系统变量 <strong>{{ ansible_hostname }}</strong>, <strong>{{ ansible_default_ipv4.address }}</strong></p>
   </li>
   <li>
-    <p>用户自定义的变量 ** {{ defined_name }} **</p>
+    <p>用户自定义的变量 <strong>{{ defined_name }}</strong></p>
   </li>
 </ul>
 
-<p>index.html.j2文件：<br />
-```</p>
-<html>
-<title>#46 Demo</title>
+<p>index.html.j2文件：</p>
 
-<!--
-http://stackoverflow.com/questions/22223270/vertically-and-horizontally-center-a-div-with-css
-http://css-tricks.com/centering-in-the-unknown/
-http://jsfiddle.net/6PaXB/
--->
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;title&gt;</span>#46 Demo<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span> <span class="na">style=</span><span class="s">"height: 99%;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"centered"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h1&gt;</span>#46 Demo \{\{ defined_name \}\}<span class="nt">&lt;/h1&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Served by \{\{ ansible_hostname \}\} (\{\{ ansible_default_ipv4.address \}\}).<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
 
-<style>.block {text-align: center;margin-bottom:10px;}.block:before {content: '';display: inline-block;height: 100%;vertical-align: middle;margin-right: -0.25em;}.centered {display: inline-block;vertical-align: middle;width: 300px;}</style>
-
-<body>
-<div class="block" style="height: 99%;">
-    <div class="centered">
-        <h1>#46 Demo </h1>
-        <p>Served by  ().</p>
-    </div>
+</code></pre>
 </div>
-</body>
-</html>
-
-<p>```</p>
 
     </div>
 

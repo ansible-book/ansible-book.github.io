@@ -18,11 +18,11 @@ ansible的脚本语言，yaml格式。请参考[YAML语法结构章节](yamlyu_f
 
 Ansible官方提供了一些比较常用的、经过测试的Playbook例子：
 
-[https:\/\/github.com\/ansible\/ansible-examples](https://github.com/ansible/ansible-examples)
+[https://github.com/ansible/ansible-examples](https://github.com/ansible/ansible-examples)
 
 ### Playbook分享平台
 
 此外，Ansible还提供了Playbook的分享平台，上面的例子是Ansible用户自己上传的。你如果在没有思路的情况下参考下吧，不过一定要再重新严谨的测试下。
 
-[https:\/\/galaxy.ansible.com\/](https://galaxy.ansible.com/)
+[https://galaxy.ansible.com/](https://galaxy.ansible.com/)
 

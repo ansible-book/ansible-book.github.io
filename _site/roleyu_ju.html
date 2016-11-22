@@ -197,39 +197,34 @@ roles/
 
 <p>定义一个带参数的role,名字是role_with_var,那么目录结构为</p>
 
-<p><code class="highlighter-rouge">
- main.yml
- roles
-   role_with_var
-     tasks
-       main.yml
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>main.yml
+roles
+ role_with_var
+   tasks
+     main.yml
+</code></pre>
+</div>
 
 <p>在roles/rolw_with_var/tasks/main.yml中,直接使用定义的变量就可以了</p>
 
-<p>```
- —
- - name: use param
-   debug: msg=””</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>### 使用带参数的role
-
-那么在main.yml就可以用如下的方法使用role_with_var
+<div class="highlighter-rouge"><pre class="highlight"><code>---
+- name: use param
+ debug: msg=""
 
 </code></pre>
 </div>
-<hr />
+<p>### 使用带参数的role</p>
 
-<ul>
-  <li>hosts: webservers
-roles:
-    <ul>
-      <li>{ role: role_with_var, param: ‘Call some_role for the 1st time’ }</li>
-      <li>{ role: role_with_var, param: ‘Call some_role for the 2nd time’ }
-```</li>
-    </ul>
-  </li>
-</ul>
+<p>那么在main.yml就可以用如下的方法使用role_with_var</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>---
+
+- hosts: webservers
+  roles:
+    - { role: role_with_var, param: 'Call some_role for the 1st time' }
+    - { role: role_with_var, param: 'Call some_role for the 2nd time' }
+</code></pre>
+</div>
 
 <h3 id="section">指定默认的参数</h3>
 
@@ -246,10 +241,11 @@ roles:
       main.yml
 </code></pre>
 </div>
-<p>在roles/role_with_var/vars/main.yml中,使用yml的字典定义语法定义param的值,如下:
-<code class="highlighter-rouge">
-param: "I am the default value"
-</code></p>
+<p>在roles/role_with_var/vars/main.yml中,使用yml的字典定义语法定义param的值,如下:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>param: "I am the default value"
+</code></pre>
+</div>
 
 <p>这样在main.yml中,下面两种调用方法都可以</p>
 
@@ -266,51 +262,42 @@ param: "I am the default value"
 
 <h2 id="section-1">与条件语句一起执行</h2>
 
-<p>下面的例子中,some_role只有在RedHat系列的server上才执行.
-```
-—</p>
+<p>下面的例子中,some_role只有在RedHat系列的server上才执行.</p>
 
-<ul>
-  <li>hosts: webservers
-roles:
-    <ul>
-      <li>{ role: some_role, when: “ansible_os_family == ‘RedHat’” }</li>
-    </ul>
-  </li>
-</ul>
+<div class="highlighter-rouge"><pre class="highlight"><code>---
 
-<div class="highlighter-rouge"><pre class="highlight"><code>
-
-## 执行顺序
-
-pre_tasks &gt; role &gt; tasks &gt; post_tasks
+- hosts: webservers
+  roles:
+    - { role: some_role, when: "ansible_os_family == 'RedHat'" }
 
 </code></pre>
 </div>
-<hr />
 
-<ul>
-  <li>
-    <p>hosts: vm-rhel7-1
-user: root</p>
+<h2 id="section-2">执行顺序</h2>
 
-    <p>pre_tasks:
-  - name: pre
-    shell: echo ‘hello’</p>
+<p>pre_tasks &gt; role &gt; tasks &gt; post_tasks</p>
 
-    <p>roles:
-  - { role: some_role }</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>---
 
-    <p>tasks:
-  - name: task
-    shell: echo ‘still busy’</p>
+- hosts: vm-rhel7-1
+  user: root
 
-    <p>post_tasks:
-  - name: post
-    shell: echo ‘goodbye’
-```</p>
-  </li>
-</ul>
+  pre_tasks:
+    - name: pre
+      shell: echo 'hello'
+
+  roles:
+    - { role: some_role }
+
+  tasks:
+    - name: task
+      shell: echo 'still busy'
+
+  post_tasks:
+    - name: post
+      shell: echo 'goodbye'
+</code></pre>
+</div>
 
 <p>看例子！！！</p>
 

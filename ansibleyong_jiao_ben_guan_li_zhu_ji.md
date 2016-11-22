@@ -110,5 +110,5 @@ playbook deploy.yml包含下面几个关键字，每个关键字的含义：
 ]
 ```
 
-提供json和yml互转的在线网站： [http:\/\/www.json2yaml.com\/](http://www.json2yaml.com/)
+提供json和yml互转的在线网站： [http://www.json2yaml.com/](http://www.json2yaml.com/)
 

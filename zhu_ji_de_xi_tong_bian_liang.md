@@ -76,13 +76,13 @@ $ ansible all -m setup -u root
 中括号：  
 
 ```
-{{ ansible_ens3["ipv4"]["address"] }}
+\{\{ ansible_ens3["ipv4"]["address"] \}\}
 ```
 
 点号：
 
 ```
-{{ ansible_ens3.ipv4.address }}
+\{\{ ansible_ens3.ipv4.address \}\}
 ```
 
 

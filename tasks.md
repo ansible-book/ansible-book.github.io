@@ -30,14 +30,14 @@ tasks:
 写name的task在playbook执行时，会显示对应的名字，信息更友好、丰富。写name是个好习惯！
 
 ```
-TASK: [make sure apache is running] ************************************************************* 
+TASK: [make sure apache is running] ************************
 changed: [yourhost]
 ```
 
 没有写name的task在playbook执行时，直接显示对应的task语法。
 
 ```
-TASK: [service name=httpd state=running] ************************************** 
+TASK: [service name=httpd state=running] *******************
 changed: [yourhost]
 ```
 
@@ -72,7 +72,7 @@ task中每个action会调用一个module，在module中会去检查当前系统�
 
 "copy" module的判断方法是比较文件的checksum，代码如下：
 
-[https:\/\/github.com\/ansible\/ansible-modules-core\/blob\/devel\/files\/copy.py](https://github.com/ansible/ansible-modules-core/blob/devel/files/copy.py)
+[https://github.com/ansible/ansible-modules-core/blob/devel/files/copy.py](https://github.com/ansible/ansible-modules-core/blob/devel/files/copy.py)
 
 ### 状态示例
 
@@ -94,7 +94,7 @@ TASK的状态是changed
 TASK的状态是ok,由于第一次执行copy\_hosts.yml的时候,已经拷贝过文件,那么ansible目标文件的状态避免重复执行.
 ![](copy_hosts_2nd.png)
 
-下面我更改vm-rhel7-1的\/etc\/hosts, 再次执行看看:
+下面我更改vm-rhel7-1的/etc/hosts, 再次执行看看:
 
 ![](copy_hosts_3rd.png)
 

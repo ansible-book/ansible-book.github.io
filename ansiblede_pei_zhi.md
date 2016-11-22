@@ -28,15 +28,15 @@ accelerate_connect_timeout = 5.0
 
 看一个完整的anbile配置文件例子，就能基本了解到ansible都能配置什么了:
 
-[https:\/\/raw.githubusercontent.com\/ansible\/ansible\/devel\/examples\/ansible.cfg](https://raw.githubusercontent.com/ansible/ansible/devel/examples/ansible.cfg)
+[https://raw.githubusercontent.com/ansible/ansible/devel/examples/ansible.cfg](https://raw.githubusercontent.com/ansible/ansible/devel/examples/ansible.cfg)
 
 对ansible配置文件里面的关键字不能完整理解，还可以参考关键词解释列表:
 
-[http:\/\/docs.ansible.com\/ansible\/intro\_configuration.html\#explanation-of-values-by-section](http://docs.ansible.com/ansible/intro_configuration.html#explanation-of-values-by-section)
+[http://docs.ansible.com/ansible/intro_configuration.html#explanation-of-values-by-section](http://docs.ansible.com/ansible/intro_configuration.html#explanation-of-values-by-section)
 
 ## anbile配置文件的优先级
 
-ansible的默认配置文件是\/etc\/ansible\/ansible.cfg。其实ansible会按照下面的顺序查找配置文件，并**使用第一个**发现的配置文件。
+ansible的默认配置文件是/etc/ansible/ansible.cfg。其实ansible会按照下面的顺序查找配置文件，并**使用第一个**发现的配置文件。
 
 ```
 * ANSIBLE_CONFIG (an environment variable)

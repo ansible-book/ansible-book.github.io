@@ -83,20 +83,20 @@ roles/
 
  定义一个带参数的role,名字是role_with_var,那么目录结构为
  
- ```
- main.yml
- roles
-   role_with_var
-     tasks
-       main.yml
- ```
+```
+main.yml
+roles
+ role_with_var
+   tasks
+     main.yml
+```
  
  在roles/rolw_with_var/tasks/main.yml中,直接使用定义的变量就可以了
  
- ```
- ---
- - name: use param
-   debug: msg="{{ param }}"
+```
+---
+- name: use param
+ debug: msg="{{ param }}"
 
 ```
 ### 使用带参数的role
@@ -128,6 +128,7 @@ roles:
       main.yml
 ```
 在roles/role_with_var/vars/main.yml中,使用yml的字典定义语法定义param的值,如下:
+
 ```
 param: "I am the default value"
 ```
@@ -150,6 +151,7 @@ param: "I am the default value"
 
 
 下面的例子中,some_role只有在RedHat系列的server上才执行.
+
 ```
 ---
 
