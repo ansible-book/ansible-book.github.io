@@ -11,7 +11,7 @@
 
   <title>
     
-      Loop循环 &middot; Ansible入门
+      目录 &middot; Ansible入门
     
   </title>
 
@@ -128,96 +128,78 @@
 
 
     <div class="content container">
-      <h1 id="loop">Loop循环</h1>
+      <h1 id="section">目录</h1>
 
-<h2 id="section">标准循环</h2>
+<ul>
+    <li><a href="sheng_ming">声明</a></li>
+    <li><a href="README">什么是Ansible</a></li>
+    <li><a href="chapter1">Ansible的架构</a>
+        <ul>
+            <li><a href="ansible_towerde_jia_gou">Ansible Tower的架构</a></li>
+        </ul>
+    </li>
+    <li><a href="ansibleshang_shou">Ansible上手</a>
+        <ul>
+            <li><a href="an_zhuang_ansile">安装Ansile</a></li>
+            <li><a href="ansiblede_zhu_ji_mu_lu_guan_li">Ansible管理哪些主机</a></li>
+            <li><a href="ansibleyong_ming_ling_guan_li_zhu_ji">Ansible用命令管理主机</a></li>
+            <li><a href="ansibleyong_jiao_ben_guan_li_zhu_ji">Ansible用脚本管理主机</a></li>
+            <li><a href="ansiblemo_kuai_module">Ansible模块Module</a></li>
+        </ul>
+    </li>
+    <li><a href="ansiblejin_jie">Ansible进阶</a>
+        <ul>
+            <li><a href="ansiblede_pei_zhi">ansible的配置</a></li>
+            <li><a href="zhu_ji_mu_lu_guan_li">Host Inventory</a>
+                <ul>
+                    <li><a href="zhu_ji_mu_lu_fen_zu">远程主机的分组</a></li>
+                    <li><a href="zhi_ding_lian_jie_de_can_shu">远程主机的连接参数和变量</a></li>
+                    <li><a href="fen_zu_guan_li_wen_jian">按目录结构存储变量</a></li>
+                </ul>
+            </li>
+            <li><a href="playbook">Ansible的脚本(Playbook)</a>
+                <ul>
+                    <li><a href="playbookji_ben_yu_fa">Playbook基本语法</a>
+                        <ul>
+                            <li><a href="zhu_ji_he_yong_hu">主机和用户(hosts&amp;user)</a></li>
+                            <li><a href="tasks">执行的任务(Tasks)</a></li>
+                            <li><a href="handler">响应事件(Handler)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="bian_liang">变量</a>
+                        <ul>
+                            <li><a href="playbookzhong_shi_yong_bian_liang">Playbook中使用的变量</a></li>
+                            <li><a href="zhu_ji_de_xi_tong_bian_liang">主机的系统变量(facts)</a></li>
+                            <li><a href="zhu_ce_bian_liang">把运行结果当做变量使用</a></li>
+                            <li><a href="tamplatezhong_shi_yong_bian_liang">文件模板中使用的变量</a></li>
+                            <li><a href="yong_ming_ling_xing_chuan_di_can_shu">用命令行传递参数</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="includeyu_ju">重用playbook(include语句)</a></li>
+                    <li><a href="roleyu_ju">playbook的“函数"(role语句)</a></li>
+                    <li><a href="tiao_jian_xuan_ze">条件语句when</a></li>
+                    <li><a href="loopxun_huan">循环语句loop</a></li>
+                    <li><a href="blockkuai">块语句block</a></li>
+                </ul>
+            </li>
+            <li><a href="mo_kuai_modules">更多的Ansible模块(Extra Modules)</a>
+                <ul>
+                    <li><a href="modulesde_fen_lei">Modules的分类</a></li>
+                    <li><a href="extra_modulede_shi_yong_fang_fa">Extra module的使用方法</a></li>
+                    <li><a href="ming_ling_xing_cha_kan_module_de_yong_fa">命令行查看module的用法</a></li>
+                </ul>
+            </li>
+            <li><a href="zui_jia_shi_yong_fang_fa">最佳使用方法</a></li>
+        </ul>
+    </li>
+    <li><a href="tui_jian_de_can_kao_zi_liao">推荐的参考资料</a>
+        <ul>
+            <li><a href="yamlyu_fa_ji_chu">YAML语法基础</a></li>
+            <li><a href="dai_xu">待续</a></li>
+        </ul>
+    </li>
+</ul>
 
-<p>为了保持简洁,重复的任务可以用以下简写的方式:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>- name: add several users
-  user: name= state=present groups=wheel
-  with_items:
-     - testuser1
-     - testuser2
-</code></pre>
-</div>
-<p>如果你在变量文件中或者 ‘vars’ 区域定义了一组YAML列表,你也可以这样做:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>vars:
-  somelist: ["testuser1", "testuser2"]
-tasks:
-  -name: add several user
-   user: name= state=present groups=wheel
-   with_items: ""
-</code></pre>
-</div>
-
-<p>使用 ‘with_items’ 用于迭代的条目类型不仅仅支持简单的字符串列表.如果你有一个哈希列表,那么你可以用以下方式来引用子项:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>- name: add several users
-  user: name= state=present groups=
-  with_items:
-    - { name: 'testuser1', groups: 'wheel' }
-    - { name: 'testuser2', groups: 'root' }
-</code></pre>
-</div>
-<p>注意：如果同时使用 when 和 with_items （或其它循环声明）,<code class="highlighter-rouge">when</code>声明会为每个条目单独执行.请参见 the_when_statement 示例.</p>
-
-<h2 id="section-1">嵌套循环</h2>
-
-<p>循环也可以嵌套:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>- name: give users access to multiple databases
-  mysql_user: name= priv=.*:ALL append_privs=yes password=foo
-  with_nested:
-    - [ 'alice', 'bob' ]
-    - [ 'clientdb', 'employeedb', 'providerd']
-</code></pre>
-</div>
-
-<p>或者</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>- name: give users access to multiple databases
-  mysql_user: name= priv=.*:ALL append_privs=yes password=foo
-  with_nested:
-    - [ 'alice', 'bob' ]
-    - [ 'clientdb', 'employeedb', 'providerd']
-</code></pre>
-</div>
-
-<h2 id="section-2">对哈希表使用循环</h2>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>---
-vars:
-  alice:
-    name: Alice Appleworth
-    telephone: 123-456-7890
-  bob:
-    name: Bob Bananarama
-    telephone: 987-654-3210
-tasks:
-  - name: Print phone records
-    debug: msg="User  is  ()"
-    with_dict: ""
-</code></pre>
-</div>
-
-<h2 id="section-3">对文件列表使用循环</h2>
-
-<p>with_fileglob 可以以非递归的方式来模式匹配单个目录中的文件.如下面所示:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>  tasks:
-
-    # first ensure our target directory exists
-    - file: dest=/etc/fooapp state=directory
-
-    # copy each file over that matches the given pattern
-    - copy: src= dest=/etc/fooapp/ owner=root mode=600
-      with_fileglob:
-        - /playbooks/files/fooapp/*
-
-</code></pre>
-</div>
 
     </div>
 

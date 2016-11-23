@@ -3,9 +3,10 @@
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
+title: Ansible的Host Inventory
 ---
 
-# Ansible的 Host Inventory 
+# Ansible的Host Inventory 
 
 ## 什么是 Host Inventory （ 主机目录 、主机清单）？
 

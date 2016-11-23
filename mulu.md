@@ -3,13 +3,10 @@
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
-title: 更多的Ansible模块
+title: 目录
 ---
-# 更多的Ansible模块
 
- - 介绍两类Modules： Core Module和Extra module
- - Extra module的配置和使用方法
- - 通过命令行查看modules的用法
+# 目录
 
-
+{% include mulu.html %}
 

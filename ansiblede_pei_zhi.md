@@ -3,9 +3,10 @@
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
+title: Ansible的配置
 ---
 
-# ansible的配置
+# Ansible的配置
 
 ## 可以配置什麼?
 
