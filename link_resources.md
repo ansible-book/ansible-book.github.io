@@ -6,20 +6,6 @@ layout: home
 title: 《Ansible快速入门》链接列表
 ---
 
-# 《Ansible快速入门》资源列表
-
-## 获取本书免费章节
-
-1. Google《Ansible入门》，第一个链接是Gitbook上《Ansible入门》即为本书的免费章节。
-2. 访问网站 [http://getansible.com](http://getansible.com "http://getansible.com")
-
-## 本书中的样例代码
-
-所有的代码均分章节放在github账户下
-
-[https://github.com/ansible-book](https://github.com/ansible-book "https://github.com/ansible-book")
-
-其中Ansible Tower章节，因为其使用方法的特殊性，有多个项目，每个项目均以tower-example*开头。
 
 ## 书中的链接列表
 
