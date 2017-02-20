@@ -58,7 +58,7 @@ title: 《Ansible快速入门》链接列表
 [http://jinja.pocoo.org/docs/2.9/templates/#builtin-filters](http://jinja.pocoo.org/docs/2.9/templates/#builtin-filters "http://jinja.pocoo.org/docs/2.9/templates/#builtin-filters")
 
 2. Ansible所有filter的使用代码示例
-[https://github.com/ansible-book/ansible-playbook-unclassified-topic/tree/master/11_filter](https://github.com/ansible-book/ansible-playbook-unclassified-topic/tree/master/11_filter "https://github.com/ansible-book/ansible-playbook-unclassified-topic/tree/master/11_filter")
+[https://github.com/ansible-book/playbook-examples-chapter4-ansible-playbook-unclassified-topic/tree/master/03_filter](https://github.com/ansible-book/playbook-examples-chapter4-ansible-playbook-unclassified-topic/tree/master/03_filter "https://github.com/ansible-book/playbook-examples-chapter4-ansible-playbook-unclassified-topic/tree/master/03_filter")
 
 3. Jinja2自带的tests文档地址
 [http://jinja.pocoo.org/docs/2.9/templates/#builtin-tests](http://jinja.pocoo.org/docs/2.9/templates/#builtin-tests "http://jinja.pocoo.org/docs/2.9/templates/#builtin-tests")
