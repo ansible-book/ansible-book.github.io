@@ -47,4 +47,6 @@ layout: home
 * [推荐的参考资料](tui_jian_de_can_kao_zi_liao.md)
     * [YAML语法基础](yamlyu_fa_ji_chu.md)
     * [待续](dai_xu.md)
-
+* [《Ansible快速入门》实体书资源]
+    * [《Ansible快速入门》资源列表](resources.md)
+    * [《Ansible快速入门》勘误表](errata.md)
