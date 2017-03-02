@@ -20,7 +20,9 @@ do
 		# 																s/'"# ${mdTitle}\n# ${mdTitle}"'/'"# ${mdTitle}"'/g
 		# 								}
 		# }' $mdFileName
+
 		#replace the title with the same/diff name
+
 		sed -i '
 		/'"# ${mdTitle}"'/ {
 										N

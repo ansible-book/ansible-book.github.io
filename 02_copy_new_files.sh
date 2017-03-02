@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SOURCE_FOLDER=/home/jshi/project/learn_ansible/ansible-first-book
+SOURCE_FOLDER=../ansible-first-book
 
 declare -a arrayname=(*.md "*.png" "*.jpg" "advance" "architecture" "begin" "reference")
 
