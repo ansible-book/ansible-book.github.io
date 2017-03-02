@@ -4,7 +4,6 @@
 ---
 
 # Modules的分类
-# Modules的分类
 
 你[Ansible Module文档](http://docs.ansible.com/ansible/modules_by_category.html)上查看单个Module的时候,每一个Module文档的底部都会标识, 这是一个"Core Module", 或者这是一个"Extra Module".
 

@@ -4,7 +4,6 @@
 ---
 
 # 推荐的参考资料
-# 推荐的参考资料
 
 
 Ansible英文视频教程: https://sysadmincasts.com/episodes/43-19-minutes-with-ansible-part-1-4

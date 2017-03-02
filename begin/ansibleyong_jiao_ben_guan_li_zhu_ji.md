@@ -4,7 +4,6 @@
 ---
 
 # Ansible用脚本管理主机
-# Ansible用脚本管理主机
 
 为了避免重复输入命令，Ansible提供脚本功能。Ansible脚本的名字叫Playbook，使用的是YAML的格式，文件以yml结尾。
 

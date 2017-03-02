@@ -4,7 +4,6 @@
 ---
 
 # Ansible的脚本(Playbook)
-# Playbook
 
 ## YML
 

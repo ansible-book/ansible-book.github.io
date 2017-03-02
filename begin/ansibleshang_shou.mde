@@ -4,7 +4,6 @@
 ---
 
 # Ansible上手
-# Ansible上手
 怎么使用Ansible，本章通过简单的例子还说明Ansilbe上手的基本步骤。
 
 1. 安装Ansible

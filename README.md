@@ -4,7 +4,6 @@
 ---
 
 # 什么是Ansible
-# Ansible介绍
 
 ## 什么是Ansible?
 

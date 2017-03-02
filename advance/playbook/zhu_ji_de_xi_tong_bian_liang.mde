@@ -4,7 +4,6 @@
 ---
 
 # 远程节点的系统变量(facts)
-# 主机的系统变量(facts)
 
 ansible会通过module setup来收集主机的系统信息，这些收集到的系统信息叫做facts，这些facts信息可以直接以变量的形式使用。
 

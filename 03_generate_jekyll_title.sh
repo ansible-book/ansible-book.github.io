@@ -12,7 +12,24 @@ do
 		echo "${mdFileName}:${mdTitle}"
 		echo "--------------"
 		sed -ie '1s/^/---\n layout: home\n title: '"${mdTitle}"'\n---\n\n# '"${mdTitle}"'\n/' $mdFileName
-		sed -ie 's/(# '"${mdTitle}"'\n){2,+}/# '"${mdTitle}"'\n/' $mdFileName
+		# #replace the title with the same name
+		# sed -i '
+		# /'"# ${mdTitle}"'/ {
+		# 								N
+		# 								/\n'"# ${mdTitle}"'/ {
+		# 																s/'"# ${mdTitle}\n# ${mdTitle}"'/'"# ${mdTitle}"'/g
+		# 								}
+		# }' $mdFileName
+		#replace the title with the same/diff name
+		sed -i '
+		/'"# ${mdTitle}"'/ {
+										N
+										/\n.*$/ {
+																		s/'"# ${mdTitle}\n"'.*/'"# ${mdTitle}"'/g
+										}
+		}' $mdFileName
+
+
 		# sed -i '1,/^$/d' $mdFileName
 		# sed -ie '1s/^\([^#]\)/---\n layout: home\n title: '"${mdTitle}"'\n---\n\n# '"${mdTitle}"'\n\1/' $mdFileName
 		# sed -ie '1s/^\([#]\)/---\n layout: home\n title: '"${mdTitle}"'\n---\n\n#\1/' $mdFileName

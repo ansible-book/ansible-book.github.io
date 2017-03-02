@@ -4,7 +4,6 @@
 ---
 
 # Playbook基本语法
-# Playbook基本语法
 
 本节列举了写第一个Playbook，你必须了解基本语法。
 

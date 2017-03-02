@@ -4,7 +4,6 @@
 ---
 
 # 利用tags执行部分tasks
-# 用tags实现执行playbook中部分tasks
 
 如果playbook文件比较大，在执行的时候只是想执行部分功能，这个时候没有有解决方案呢？Playbook提供了tags便签可以实现部分运行。
 

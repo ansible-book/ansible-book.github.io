@@ -4,7 +4,6 @@
 ---
 
 # Ansible Tower的架构
-# Ansible Tower的架构
 
 ## 为什么要有Ansbile Tower
 

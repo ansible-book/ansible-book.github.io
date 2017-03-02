@@ -4,7 +4,6 @@
 ---
 
 # Playbook的“Package”(role语句)
-# Role - Playbook的“Package”
 
 Role是比include更强大灵活的代码重用和分享机制。Include类似于编程语言中的include，是重用单个文件的，功能有限。
 

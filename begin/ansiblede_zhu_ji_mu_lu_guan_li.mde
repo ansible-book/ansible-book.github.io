@@ -4,7 +4,6 @@
 ---
 
 # Ansible管理哪些主机
-# Ansible的 Host Inventory（主机清单）
 
 ## 什么是 Host Inventory （主机清单）？
 

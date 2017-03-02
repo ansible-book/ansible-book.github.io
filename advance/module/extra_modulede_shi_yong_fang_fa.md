@@ -4,7 +4,6 @@
 ---
 
 # Extra module的使用方法
-# Extra module的使用方法
 
 使用Exra module需要进行下面的配置，就可以在命令行playbook中使用了。配置后extra module使用方法和core module的使用方法是一样的。
 

@@ -4,7 +4,6 @@
 ---
 
 # 待续
-# 待续
 
 
 ## Ansible Tower 简介

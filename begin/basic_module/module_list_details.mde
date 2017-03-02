@@ -4,7 +4,6 @@
 ---
 
 # 常用几个module的用法
-# 介绍几个常用的module
 
 学习Linux操作系统，如果不懂一些基本的命令，那么真的没有办法用Linux。所以学习Ansible也非常有必要了解一些常用的module。
 

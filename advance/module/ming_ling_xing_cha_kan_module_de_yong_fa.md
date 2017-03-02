@@ -4,7 +4,6 @@
 ---
 
 # 命令行查看module的用法
-# 命令行查看module的用法
 
 类似bash命令的man，ansible也可以通过命令行查看module的用法。命令是ansible-doc，语法如下:
 
