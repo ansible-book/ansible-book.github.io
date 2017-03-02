@@ -1,0 +1,252 @@
+---
+ layout: home
+ title: Playbook的“Package”(role语句)
+---
+
+# Playbook的“Package”(role语句)
+# Role - Playbook的“Package”
+
+Role是比include更强大灵活的代码重用和分享机制。Include类似于编程语言中的include，是重用单个文件的，功能有限。
+
+而Role类似于编程语言中的“Package”，可以重用一组文件形成完整的功能。例如安装和配置apache，需要tasks实现安装包和拷贝模版等，httpd.conf和index.html的模版文件，和handler文件实现重起功能。这些文件都可以放在一个role里面，供不同的playbook文件重用。
+
+Ansible非常提倡在playbook中使用role，并且提供了一个分享role的平台Ansible Galaxy, https://galaxy.ansible.com/, 在galaxy上可以找到别人写好的role。在后面的章节中，我们再详细介绍如何使用它。
+
+
+## 定义role完整的目录结构
+
+
+**在ansible中,通过遵循特定的目录结构,就可以实现对role的定义。**。具体遵循的目录结构是什么呢？看下面的例子：
+
+下面的目录结构定义了一个role：名字为myrole。在site.yml，调用了这个role。
+
+
+<table>
+    <tr>
+        <td>
+            role的目录结构
+        </td>
+        <td>
+            site.yml中调用role
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <pre>
+<code class='lang-yml'>
+site.yml
+roles/
+├── myrole
+    ├── tasks
+    │   └── main.yml
+    ├── handlers
+    │   └── main.yml
+    ├── defaults
+    │   └── main.yml
+    ├── vars
+    │   └── main.yml
+    ├── files
+    ├── templates
+    ├── README.md
+    ├── meta
+    │   └── main.yml
+    └── tests
+        ├── inventory
+        └── test.yml
+
+
+</code>
+</pre>
+        </td>
+        <td>
+            <pre>
+<code>
+---
+- hosts: webservers
+  roles:
+     - myrole
+</code>
+</pre>
+
+        </td>
+    </tr>
+</table>
+
+ansible并不要求role包含上述所有的目录及文件，根据role的功能需要加入对应的目录和文件。下面是每个目录和文件的功能。
+
+* 如果 roles/x/tasks/main.yml 存在, 其中列出的 tasks 将被添加到 play 中，所以这个文件也可以视作role的入口文件，想看role做了什么操作，可以从此文件看起。
+* 如果 roles/x/handlers/main.yml 存在, 其中列出的 handlers 将被添加到 play 中
+* 如果 roles/x/vars/main.yml 存在, 其中列出的 variables 将被添加到 play 中
+* 如果 roles/x/meta/main.yml 存在, 其中列出的 “角色依赖” 将被添加到 roles 列表中
+* roles/x/tasks/main.yml中所有tasks，可以引用 roles/x/{files,templates,tasks}中的文件，不需要指明文件的路径。
+
+你自己在写role的时候，一般都要包含role入口文件roles/x/tasks/main.yml，其它的文件和目录，可以根据需求选择加入。
+
+学会写一个功能完整的role是一个相对复杂的过程，也是ansible中较高级的使用方法。在本小节，我们重点介绍如何使用别人已经写好的role。在后面的章节中，我们会通过具体的示例来逐步介绍写role的所需的知识。
+
+## 带参数的Role
+
+### 参数在role中是如何定义的呢
+
+ 定义一个带参数的role,名字是myrole,那么目录结构为
+
+ ```
+ main.yml
+ roles
+   role_with_var
+     tasks
+       main.yml
+ ```
+
+ 在roles/myrole/tasks/main.yml中,使用```{{ }}```定义的变量就可以了
+
+ ```
+ ---
+ - name: use param
+   debug: msg="{{ param }}"
+
+```
+### 使用带参数的role
+
+那么在main.yml就可以用如下的方法使用myrole
+
+```
+---
+
+- hosts: webservers
+  roles:
+    - { role: myrole, param: 'Call some_role for the 1st time' }
+    - { role: myrole, param: 'Call some_role for the 2nd time' }
+```
+
+或者写成YAML字典格式：
+
+```
+---
+
+- hosts: webservers
+  roles:
+    - role: myrole
+      param: 'Call some_role for the 1st time'
+    - role: myrole
+      param: 'Call some_role for the 2nd time'
+```
+
+### role指定默认的参数
+
+指定默认参数后,如果在调用时传参数了,那么就使用传入的参数值.如果调用的时候没有传参数,那么就使用默认的参数值.
+
+指定默认参数很简单,以上面的role_with_var为例
+
+```
+main.yml
+roles:
+  myrole
+    tasks
+      main.yml
+    defaults
+      main.yml
+```
+在roles/myrole/defaults/main.yml中,使用yml的字典定义语法定义param的值,如下:
+```
+param: "I am the default value"
+```
+
+这样在main.yml中,下面两种调用方法都可以
+
+```
+---
+
+- hosts: webservers
+  roles:
+    - role_with_var
+    - { role: role_with_var, param: 'I am the value from external' }
+
+```
+更多的例子在https://github.com/shijingjing1221/ansible-first-book-examples/blob/master/role_vars.yml 中
+
+
+## role与条件语句when一起执行
+
+
+下面的例子中,my_role只有在RedHat系列的server上才执行。
+
+```
+---
+
+- hosts: webservers
+  roles:
+    - { role: my_role, when: "ansible_os_family == 'RedHat'" }
+
+```
+
+同样也可以写成YAML字典格式
+
+```
+---
+
+- hosts: webservers
+  roles:
+    - role: my_role
+      when: "ansible_os_family == 'RedHat'"
+
+```
+
+
+## roles和tasks的执行顺序
+
+如果一个playbook同时出现role和tasks，他们的调用顺序是什么样的呢？
+
+先揭晓答案，再根据实例来验证：
+
+**pre_tasks > role > tasks > post_tasks**
+
+```
+---
+
+- hosts: lb
+  user: root
+
+  pre_tasks:
+    - name: pre
+      shell: echo 'hello'
+
+  roles:
+    - { role: some_role }
+
+  tasks:
+    - name: task
+      shell: echo 'still busy'
+
+  post_tasks:
+    - name: post
+      shell: echo 'goodbye'
+```
+
+执行的结果为：
+
+```
+PLAY [lb] **********************************************************************
+
+
+TASK [setup] *******************************************************************
+ok: [rhel7u3]
+
+TASK [pre] *********************************************************************
+changed: [rhel7u3]
+
+TASK [some_role : some role] ***************************************************
+ok: [rhel7u3] => {
+    "msg": "Im some role"
+}
+
+TASK [task] ********************************************************************
+changed: [rhel7u3]
+
+TASK [post] ********************************************************************
+changed: [rhel7u3]
+
+PLAY RECAP *********************************************************************
+rhel7u3                    : ok=5    changed=3    unreachable=0    failed=0
+
+```

@@ -1,0 +1,38 @@
+#!/bin/bash
+
+lineRegex='\[(.*)\]\((.*)\)'
+cat  SUMMARY.md | while read line
+do
+	# echo "$t"
+	if [[ $line =~ $lineRegex ]]
+	then
+		echo "--------------"
+	  mdFileName=${BASH_REMATCH[2]}
+		mdTitle=${BASH_REMATCH[1]}
+		echo "${mdFileName}:${mdTitle}"
+		echo "--------------"
+		sed -ie '1s/^/---\n layout: home\n title: '"${mdTitle}"'\n---\n\n# '"${mdTitle}"'\n/' $mdFileName
+		sed -ie 's/(# '"${mdTitle}"'\n){2,+}/# '"${mdTitle}"'\n/' $mdFileName
+		# sed -i '1,/^$/d' $mdFileName
+		# sed -ie '1s/^\([^#]\)/---\n layout: home\n title: '"${mdTitle}"'\n---\n\n# '"${mdTitle}"'\n\1/' $mdFileName
+		# sed -ie '1s/^\([#]\)/---\n layout: home\n title: '"${mdTitle}"'\n---\n\n#\1/' $mdFileName
+		# replace the content
+		sed -ie 's/^ *```/```/g' $mdFileName
+		# sed -ie 's/```.*$/```/g' $mdFileName
+		sed -i '
+		/./ {
+		        N
+		        /\n```/ {
+		                s/\n```/\n\n```/g
+		        }
+		}' $mdFileName
+
+		sed -i 's/{{/\\{\\{/g' $mdFileName
+		sed -i 's/\}\}/\\\}\\\}/g' $mdFileName
+	else
+		echo "does NOT match"
+	fi
+done
+
+sed -i '1s/^/---\n layout: home\n title: Ansible入门\n---\n/' index.md
+sed -i '1s/^/---\n layout: home\n title: 目录\n---\n/' mulu.md

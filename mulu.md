@@ -1,12 +1,55 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
-title: 目录
+ layout: home
+ title: 目录
 ---
+# Summary
 
-# 目录
-
-{% include mulu.html %}
+* [声明](sheng_ming)
+* [什么是Ansible](README)
+* [Ansible的架构](chapter1)
+  * [Ansible Tower的架构](architecture/ansible_towerde_jia_gou)
+* [Ansible上手](begin/ansibleshang_shou)
+  * [安装Ansile](begin/an_zhuang_ansile)
+  * [Ansible管理哪些主机](begin/ansiblede_zhu_ji_mu_lu_guan_li)
+  * [Ansible用命令管理主机](begin/ansibleyong_ming_ling_guan_li_zhu_ji)
+  * [Ansible用脚本管理主机](begin/ansibleyong_jiao_ben_guan_li_zhu_ji)
+    * [Play vs Playbook](begin/play_vs_playbook)
+  * [Ansible模块Module](begin/ansiblemo_kuai_module)
+    * [常用几个module的用法](begin/basic_module/module_list_details)
+* [Ansible进阶](advance/ansiblejin_jie)
+  * [ansible的配置](advance/setting/ansiblede_pei_zhi)
+  * [Host Inventory（主机清单）](advance/inventory/zhu_ji_mu_lu_guan_li)
+    * [远程主机的分组](advance/inventory/zhu_ji_mu_lu_fen_zu)
+    * [远程主机的连接参数和变量](advance/inventory/zhi_ding_lian_jie_de_can_shu)
+    * [按目录结构存储变量](advance/inventory/fen_zu_guan_li_wen_jian)
+  * [Ansible的脚本\(Playbook\)](advance/playbook/playbook)
+    * [Playbook基本语法](playbookji_ben_yu_fa)
+      * [主机和用户\(hosts&user\)](advance/playbook/zhu_ji_he_yong_hu)
+      * [执行的任务\(Tasks\)](advance/playbook/tasks)
+      * [响应事件\(Handler\)](advance/playbook/handler)
+    * [变量](advance/playbook/bian_liang)
+      * [Playbook中定义的变量](advance/playbook/playbookzhong_shi_yong_bian_liang)
+      * [远程节点的系统变量\(facts\)](advance/playbook/zhu_ji_de_xi_tong_bian_liang)
+      * [文件模板中使用的变量](advance/playbook/tamplatezhong_shi_yong_bian_liang)
+      * [把Task的执行结果当做变量\(注册变量\)](advance/playbook/zhu_ce_bian_liang)
+      * [用命令行中传递变量](advance/playbook/yong_ming_ling_xing_chuan_di_can_shu)
+    * [Playbok中的逻辑控制语句](advance/playbook/logic_control_statement)
+      * [条件语句when](advance/playbook/tiao_jian_xuan_ze)
+      * [循环语句loop](advance/playbook/loopxun_huan)
+      * [块语句block](advance/playbook/blockkuai)
+    * [如何重用Playbook](advance/playbook/reuse_playbook)
+      * [重用单个playbook文件\(include语句\)](advance/playbook/includeyu_ju)
+      * [Playbook的“Package”\(role语句\)](advance/playbook/roleyu_ju)
+    * [利用tags执行部分tasks](advance/playbook/tags_statement)
+  * [更多的Ansible模块\(Extra Modules\)](advance/module/mo_kuai_modules)
+    * [Modules的分类](advance/module/modulesde_fen_lei)
+    * [Extra module的使用方法](advance/module/extra_modulede_shi_yong_fang_fa)
+    * [命令行查看module的用法](advance/module/ming_ling_xing_cha_kan_module_de_yong_fa)
+  * [写出更好的Playbook脚本](advance/best_practice/zui_jia_shi_yong_fang_fa)
+* [推荐的参考资料](reference/tui_jian_de_can_kao_zi_liao)
+  * [YAML语法基础](reference/yamlyu_fa_ji_chu)
+  * [待续](reference/dai_xu)
+* [《Ansible快速入门》实体书资源](reference/resources)
+  * [《Ansible快速入门》链接资源列表](reference/link_resources)
+  * [《Ansible快速入门》勘误表](reference/errata)
 

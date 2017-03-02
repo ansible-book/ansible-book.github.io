@@ -1,10 +1,9 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
-title: Playbook基本语法
+ layout: home
+ title: Playbook基本语法
 ---
+
+# Playbook基本语法
 # Playbook基本语法
 
 本节列举了写第一个Playbook，你必须了解基本语法。
@@ -39,17 +38,17 @@ ansible-playbook playbook.yml -f 10
 
 最基本的playbook脚本分为三个部分:
 
-1.在什么机器上以什么身份执行
+1. 在什么机器上以什么身份执行
 
   * hosts
   * users
   * ...
 
-2.执行的任务是都有什么
+2. 执行的任务是都有什么
 
   * tasks
 
-3.善后的任务都有什么
+3. 善后的任务都有什么
 
   * handlers
 
@@ -75,5 +74,6 @@ deploy.yml文件
   handlers:
     - name: restart apache
       service: name=httpd state=restarted
+
 ```
 
