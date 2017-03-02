@@ -4,7 +4,6 @@
 ---
 
 # 文件模板中使用的变量
-
 template module在Ansible中很常用，而它在使用的时候又没有显式的指定template文件中的值，有时候用户会对template文件中使用的变量感到困惑，所以在这里再次强调下。
 
 ## template变量的定义

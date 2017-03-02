@@ -5,7 +5,6 @@
 
 # Ansible模块Module
 
-
 ## 什么是Ansible Module？
 
 bash无论在命令行上执行，还是bash脚本中，都需要调用cd、ls、copy、yum等命令；module就是Ansible的“命令”，module是ansible命令行和脚本中都需要调用的。常用的Ansible module有yum、copy、template等。

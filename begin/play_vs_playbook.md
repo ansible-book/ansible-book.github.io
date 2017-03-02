@@ -4,7 +4,6 @@
 ---
 
 # Play vs Playbook
-
 Playbook是指一个可被ansible执行的yml文件，一般的结构如下面的例子所示：
 
 ```

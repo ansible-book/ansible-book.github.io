@@ -4,7 +4,6 @@
 ---
 
 # Extra module的使用方法
-
 使用Exra module需要进行下面的配置，就可以在命令行playbook中使用了。配置后extra module使用方法和core module的使用方法是一样的。
 
 \[注\]部分Extra module经过一段时间的测试，就会放到Core module。其实Ansible团队会一直致力于把成熟的长期使用没有问题的Module放入Core Module中，方便客户的使用。所以当你的Playbok运行报错是没有相应的module时，你只要知道可能出现问题的地方和解决方案就可以。

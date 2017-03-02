@@ -4,7 +4,6 @@
 ---
 
 # 《Ansible快速入门》实体书资源
-
 ## 获取本书免费章节
 
 1. Google《Ansible入门》，第一个链接是Gitbook上《Ansible入门》即为本书的免费章节。

@@ -4,7 +4,6 @@
 ---
 
 # Ansible用命令管理主机
-
 Ansible提供了一个命令行工具，在官方文档中起给命令行起了一个名字叫Ad-Hoc Commands。
 
 ansible命令的格式是：

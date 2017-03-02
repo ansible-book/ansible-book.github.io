@@ -4,7 +4,6 @@
 ---
 
 # ansible的配置
-
 ## 可以配置什麼?
 
 从基本的，主机清单文件"inventory"，extra module放置路径"library" ，远程主机的临时文件位置" remote_tmp" ，管理节点上临时文件的位置"local_tmp"

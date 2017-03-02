@@ -11,6 +11,8 @@ do
 		mdTitle=${BASH_REMATCH[1]}
 		echo "${mdFileName}:${mdTitle}"
 		echo "--------------"
+		sed -i '1,/^$/{/^$/d}' $mdFileName
+		sed -i '1,/^\r$/{/^\r$/d}' $mdFileName
 		sed -ie '1s/^/---\n layout: home\n title: '"${mdTitle}"'\n---\n\n# '"${mdTitle}"'\n/' $mdFileName
 		# #replace the title with the same name
 		# sed -i '
@@ -32,9 +34,6 @@ do
 		}' $mdFileName
 
 
-		# sed -i '1,/^$/d' $mdFileName
-		# sed -ie '1s/^\([^#]\)/---\n layout: home\n title: '"${mdTitle}"'\n---\n\n# '"${mdTitle}"'\n\1/' $mdFileName
-		# sed -ie '1s/^\([#]\)/---\n layout: home\n title: '"${mdTitle}"'\n---\n\n#\1/' $mdFileName
 		# replace the content
 		sed -ie 's/^ *```/```/g' $mdFileName
 		# sed -ie 's/```.*$/```/g' $mdFileName

@@ -4,7 +4,6 @@
 ---
 
 # Ansible Tower的架构
-
 ## 为什么要有Ansbile Tower
 
 Ansilbe Tower一款针对企业用户的收费软件。
