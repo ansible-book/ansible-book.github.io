@@ -33,7 +33,7 @@ TASK: [make sure apache is running] ********************************************
 changed: [yourhost]
 ```
 
-没有写name的task在playbook执行时，直接显示对应的task语法。在调用同样的module多次后，不同意分辨执行到哪步了。
+没有写name的task在playbook执行时，直接显示对应的task语法。在调用同样的module多次后，不容易分辨执行到哪步了。
 
 ```
 TASK: [service name=httpd state=running] **************************************
