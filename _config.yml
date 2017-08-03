@@ -37,7 +37,7 @@ title:            Ansible入门
 tagline:          '快速定位本书，请google“ansilbe入门”'
 description:      'Ansible入门,快速定位本书，请google“ansilbe入门'
 url:              http://getansible.com
-baseurl:          ""
+baseurl:          "/"
 
 author:
   name:           'Jingjing Shi'
