@@ -71,6 +71,24 @@ html {
   }
 }
 
+.sidebar-right {
+  text-align: center;
+  padding: 0rem 1rem 2rem 1rem;
+  color: rgba(255,255,255,.5);
+  /*background-color: #202020;*/
+}
+@media (min-width: 48em) {
+  .sidebar-right  {
+    position: fixed;
+    top: 10rem;
+    right: 0;
+    bottom: 0;
+    width: 10rem;
+    text-align: right;
+    overflow-y: auto;
+  }
+}
+
 /* Sidebar links */
 .sidebar a {
   color: #fff;

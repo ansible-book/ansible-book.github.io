@@ -27,8 +27,9 @@ Google "Ansible入门" 或 访问网站 [Ansible入门](http://getansible.com/) 
 ## 本书资源
 
 本文的所有ansible playbook例子都放在github上,欢迎补充和纠错:
-
 [https://github.com/ansible-book/ansible-first-book-examples](https://github.com/ansible-book/ansible-first-book-examples)
 
-也可以联系作者进行纠正错误： shijingjing02@163.com
+购买实体书获取全部内容，包含Ansible Galaxy，Ansible Tower等：
+<a  href="https://www.amazon.cn/gp/product/B072ZP1QWD/ref=as_li_qf_sp_asin_tl?ie=UTF8&camp=536&creative=3200&creativeASIN=B072ZP1QWD&linkCode=as2&tag=getansible-23" target="_blank">Ansible快速入门:技术原理与实战</a><img src="http://ir-cn.amazon-adsystem.com/e/ir?t=getansible-23&l=as2&o=28&a=B072ZP1QWD" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
+也可以联系作者进行纠正错误： shijingjing02@163.com
