@@ -11,7 +11,7 @@
 ## 执行脚本playbook的方法
 
 ```
-$ansible-palybook deploy.yml
+$ansible-playbook deploy.yml
 ```
 
 ## playbook的例子
