@@ -7,7 +7,9 @@
 ### 《Ansible入门》章节
 1. 提供json和yml互转的在线网站 [http://www.json2yaml.com/](json和yml互转网站 "http://www.json2yaml.com/")
 
-2. Ansible Module的在线文档
+2. 用于操作 YAML 的在线网站 [https://yamline.com/](https://yamline.com/)
+
+3. Ansible Module的在线文档
 [http://docs.ansible.com/ansible/modules_by_category.html](http://docs.ansible.com/ansible/modules_by_category.html "http://docs.ansible.com/ansible/modules_by_category.html")
 
 ### 《Ansible进阶》章节
